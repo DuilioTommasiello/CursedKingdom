@@ -16,15 +16,16 @@ public class SwitchCharacter : MonoBehaviour
 
     public void Update()
     {
-        
+        if (Input.GetKeyDown(SwitchCH))
+        {
+            switchCharacter();
+        }
         
     }
 
 
     public void switchCharacter()
-    {
-        if (Input.GetKey(SwitchCH))
-        {
+    {  
 
         
         switch (WitchAvatarIsOn)
@@ -47,5 +48,5 @@ public class SwitchCharacter : MonoBehaviour
         }
 
          }
-    }
+    
 }
