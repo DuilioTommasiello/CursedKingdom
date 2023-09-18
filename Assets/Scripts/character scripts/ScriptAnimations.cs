@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarkusAnimations : MonoBehaviour
+public class ScriptAnimations : MonoBehaviour
 {
     [Header("Animator")]
     public Animator playerAnimator;
