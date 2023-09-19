@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Dagger_Behaviuor : MonoBehaviour
 {
-    MarkusPowers Timers;
-    private float _DGcounter;
     [SerializeField]public float _DgAirTime = 1;
+    LadyPowers Timers;
     private KeyCode _QPower = KeyCode.Q;
+    private float _DGcounter;
     public int _DgSpeed;
     public bool _boolTest = true;
     public float _DgDestroy = 3f;

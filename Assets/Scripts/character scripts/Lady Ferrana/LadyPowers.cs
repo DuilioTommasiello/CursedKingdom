@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarkusPowers : MonoBehaviour
+public class LadyPowers : MonoBehaviour
 {
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject Sword;
