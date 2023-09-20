@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dagger_Behaviuor : MonoBehaviour
 {
     [SerializeField]public float _DgAirTime = 1;
-    LadyPowers Timers;
+    Habilities Timers;
     private KeyCode _QPower = KeyCode.Q;
     private float _DGcounter;
     public int _DgSpeed;

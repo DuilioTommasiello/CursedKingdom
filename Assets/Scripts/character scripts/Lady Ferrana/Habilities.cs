@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LadyPowers : MonoBehaviour
+public class Habilities : MonoBehaviour
 {
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
