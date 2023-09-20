@@ -15,7 +15,7 @@ public class movement : MonoBehaviour
     [SerializeField] private float _mana = 500f;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
-    private Rigidbody2D _PlayerRb;
+    public Rigidbody2D _PlayerRb;
     private Vector2 _moveInput;
     private Vector2 _actualVec;
 

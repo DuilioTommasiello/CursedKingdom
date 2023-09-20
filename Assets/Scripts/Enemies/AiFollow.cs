@@ -9,7 +9,7 @@ public class AiFollow : MonoBehaviour
     [SerializeField] public Transform player2;
 
     [SerializeField] private float distance;
-
+    [SerializeField] private GameObject crawler;
     public Vector3 initialPoint;
    
     private Animator animator;
@@ -30,7 +30,7 @@ public class AiFollow : MonoBehaviour
         animator.SetFloat("Distancia", distance);
     }
 
-    public void turn(Vector3 objetive)
+    public void Turnx(Vector3 objetive)
     {
         if (transform.position.x < objetive.x)
         {
@@ -40,5 +40,21 @@ public class AiFollow : MonoBehaviour
         {
             spriterender.flipX = false;
         }
+        
     }
+
+    public void TurnY(Vector3 objetive)
+    {
+        if (transform.position.y < objetive.y)
+        {
+            spriterender.flipY = true;
+        }
+        else
+        {
+            spriterender.flipY = false;
+        }
+    }
+
+    
+
 }
