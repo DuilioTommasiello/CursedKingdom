@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class basicArrow : MonoBehaviour
 {
-     LadyPowers ladyScript;
-     private KeyCode _QPower = KeyCode.Q;
-     private KeyCode _basicAtack = KeyCode.Space;
+    Habilities habilitiesScript;
 
-    public void Start()
+    [Header("Values")]
+    [SerializeField] public float distance;
+    [SerializeField] public float _atackSpeed;
+    [SerializeField] public float _destroyTime = 1.5f;
+    [SerializeField] private KeyCode _basicAtack = KeyCode.Space;
+
+    public void Update()
     {
-        if(Input.GetKeyDown(_QPower))
-        {
-            
-        }
+        transform.Translate(Vector3.up * _atackSpeed * Time.deltaTime);
+        Destroy(gameObject,_destroyTime);
+
+
+    }
+
+    void atackMove()
+    {
+
     }
 }
