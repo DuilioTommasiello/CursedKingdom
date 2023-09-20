@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2184927094857823823}
   - component: {fileID: 2184927094857823821}
   - component: {fileID: 2184927094857823820}
+  - component: {fileID: 5654237458331204954}
+  - component: {fileID: 6684011889373158708}
   m_Layer: 0
   m_Name: Ferrana
   m_TagString: Untagged
@@ -92,6 +94,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &5654237458331204954
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184927094857823816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0082376, y: -0.0164752}
+  m_Size: {x: 0.74712825, y: 1.3624549}
+  m_Direction: 0
+--- !u!114 &6684011889373158708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184927094857823816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicArea: {fileID: 5900234540407914847}
+  basicAtack: {fileID: 8191158315480427295, guid: 55ce47896fbe1b347a972b44662ee3ac, type: 3}
+  Wprefab: {fileID: 2408839881451889732, guid: 06d3f5d1677f5074fa31208935c8110b, type: 3}
+  Qprefab: {fileID: 5471325156760903172, guid: 6d62a9467b8ada544b6d0cdb282d442d, type: 3}
+  Eprefab: {fileID: 6949149490231088953, guid: a1b3631aae1c6aa4aad1fce3198cbae0, type: 3}
+  basicReady: 1
+  Wready: 1
+  Qready: 1
+  Eready: 1
+  Rready: 1
+  _BasicCounter: 0
+  _Qcounter: 0
+  _Wcounter: 0
+  _Ecounter: 0
+  _Rcounter: 0
+  _basicCoolDown: 0.5
+  _QCoolDown: 1
+  _WCoolDown: 2
+  _ECoolDown: 3
+  _RCoolDown: 0.5
+  _QPower: 113
+  _WPower: 119
+  _EPower: 101
+  _RPower: 114
+  _basicAtack: 32
+  _swapKey: 104
 --- !u!1 &2857127634804340483
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,10 +5,10 @@ using UnityEngine;
 public class LadyPowers : MonoBehaviour
 {
     [SerializeField] public Transform basicArea;
-    [SerializeField] public GameObject Sword;
-    [SerializeField] public GameObject Strike;
-    [SerializeField] public GameObject Dagger;
-    [SerializeField] public GameObject Slash;
+    [SerializeField] public GameObject basicAtack;
+    [SerializeField] public GameObject Wprefab;
+    [SerializeField] public GameObject Qprefab;
+    [SerializeField] public GameObject Eprefab;
     [SerializeField] public bool basicReady, Wready, Qready, Eready, Rready = true;
 
     [Header("timers")]
@@ -20,10 +20,10 @@ public class LadyPowers : MonoBehaviour
     [SerializeField] private float _RCoolDown = 0.5f;
 
     [Header("keys")]
-    [SerializeField] private KeyCode _QPower = KeyCode.Q;
     [SerializeField] private KeyCode _WPower = KeyCode.W;
     [SerializeField] private KeyCode _EPower = KeyCode.E;
     [SerializeField] private KeyCode _RPower = KeyCode.R;
+    [SerializeField] private KeyCode _QPower = KeyCode.Q;
     [SerializeField] private KeyCode _basicAtack = KeyCode.Space;
     [SerializeField] private KeyCode _swapKey = KeyCode.H;
 
@@ -107,41 +107,41 @@ public class LadyPowers : MonoBehaviour
     }
 
 
-    void basicAtacks()
+        public virtual void basicAtacks()
     {
         if (Input.GetKey(_basicAtack) && basicReady == true)
         {
-            Instantiate(Sword, basicArea.position, basicArea.rotation);
+            Instantiate(basicAtack, basicArea.position, basicArea.rotation);
             basicReady = false;
             Debug.Log(" you have use the Space");
 
         }
     }
 
-    void wAbility()
+        public virtual void wAbility()
     {
         if (Input.GetKey(_WPower) && Wready == true)
         {
-            Instantiate(Strike, basicArea.position, basicArea.rotation);
+            Instantiate(Wprefab, basicArea.position, basicArea.rotation);
             Wready = false;
             Debug.Log(" you have use the W");
         }
     }
-    void qAbility ()
+        public virtual void qAbility ()
     {
         if(Input.GetKey(_QPower) && Qready == true)
         {
-            Instantiate(Dagger, basicArea.position, basicArea.rotation);
+            Instantiate(Qprefab, basicArea.position, basicArea.rotation);
             Qready = false;
             Debug.Log("you have use the Q");
 
         }
     }
-    void eAbility()
+        public virtual void eAbility()
     {
         if(Input.GetKey(_EPower) && Eready == true)
         {
-            Instantiate(Slash, basicArea.position, basicArea.rotation);
+            Instantiate(Eprefab, basicArea.position, basicArea.rotation);
             Eready = false;
             Debug.Log("You hace use the W");
 
