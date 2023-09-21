@@ -16,7 +16,7 @@ public class movement : MonoBehaviour
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
     public Rigidbody2D _PlayerRb;
-    private Vector2 _moveInput;
+    public Vector2 _moveInput;
     private Vector2 _actualVec;
 
 
@@ -29,6 +29,7 @@ public class movement : MonoBehaviour
     private void Awake()
     {
         _PlayerRb = GetComponent<Rigidbody2D>();
+
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class movement : MonoBehaviour
         }
     }
     
-    private void move( float X, float Y)
+    public void move( float X, float Y)
     {
         _PlayerRb.MovePosition(_PlayerRb.position + _moveInput * _movSpeed);
 

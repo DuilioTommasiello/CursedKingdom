@@ -6,7 +6,7 @@ public class Crawler_Follow : StateMachineBehaviour
 {
     [SerializeField] private float velocityMovment;
     [SerializeField] private float baseTempo;
-
+    
     private float followTime;
 
     private Transform player;
