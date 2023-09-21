@@ -6,6 +6,7 @@ public class ScriptAnimations : MonoBehaviour
 {
     [Header("Animator")]
     public Animator playerAnimator;
+    public bool isMoving;
 
     private movement mov;
     private Vector2 _moveInput;
@@ -17,14 +18,25 @@ public class ScriptAnimations : MonoBehaviour
 
     void Update()
     {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
-        
-        if(moveX != 0 || moveY != 0)
+
+        float LastmoveX = Input.GetAxis("Horizontal");
+        float LastmoveY = Input.GetAxis("Vertical");
+
+        playerAnimator.SetFloat("Horizontal", moveX);
+        playerAnimator.SetFloat("Vertical", moveY);
+
+        if (moveX != 0 || moveY != 0)
         {
-            playerAnimator.SetFloat("Horizontal", moveX);
-            playerAnimator.SetFloat("Vertical", moveY);
+            playerAnimator.SetFloat("LastHor", LastmoveX);
+            playerAnimator.SetFloat("LastVert", LastmoveY);
+            playerAnimator.SetBool("isMoving", isMoving = true);
+        }else
+        {
+            playerAnimator.SetBool("isMoving", isMoving = false);
+
         }
       }
 
