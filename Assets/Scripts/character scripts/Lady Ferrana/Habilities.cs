@@ -9,7 +9,7 @@ public class Habilities : MonoBehaviour
     [SerializeField] public GameObject Wprefab;
     [SerializeField] public GameObject Qprefab;
     [SerializeField] public GameObject Eprefab;
-    [SerializeField] public bool basicReady, Wready, Qready, Eready, Rready = true;
+    [SerializeField] public bool basicReady, Wready, Qready, Eready = true;
 
     [Header("timers")]
     [SerializeField] private float _BasicCounter, _Qcounter, _Wcounter, _Ecounter, _Rcounter;
@@ -17,12 +17,10 @@ public class Habilities : MonoBehaviour
     [SerializeField] private float _QCoolDown = 1f;
     [SerializeField] private float _WCoolDown = 2f;
     [SerializeField] private float _ECoolDown = 3f;
-    [SerializeField] private float _RCoolDown = 0.5f;
 
     [Header("keys")]
     [SerializeField] private KeyCode _WPower = KeyCode.W;
     [SerializeField] private KeyCode _EPower = KeyCode.E;
-    [SerializeField] private KeyCode _RPower = KeyCode.R;
     [SerializeField] private KeyCode _QPower = KeyCode.Q;
     [SerializeField] private KeyCode _basicAtack = KeyCode.Space;
     [SerializeField] private KeyCode _swapKey = KeyCode.H;
