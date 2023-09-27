@@ -505,20 +505,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &510096038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510096030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4afbd3ce40d2bf54196a53b4673a3de7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Markus: {fileID: 1457223795}
-  Ferana: {fileID: 510096030}
 --- !u!4 &510096040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571709424904615729, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
@@ -535,6 +521,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -608,6 +595,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afbd3ce40d2bf54196a53b4673a3de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Markus: {fileID: 510096030}
+  Ferana: {fileID: 1457223795}
 --- !u!1 &658934356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2261,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FerranaSprite
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2184927094857823821, guid: 0935504424aee384190b4e2559961c5d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0935504424aee384190b4e2559961c5d, type: 3}
 --- !u!1001 &4571709423144588294
 PrefabInstance:
