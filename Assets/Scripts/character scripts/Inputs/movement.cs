@@ -5,9 +5,9 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     [Header("Animator")]
-    [SerializeField] private float _movSpeed = 5f;
+    [SerializeField] public float _movSpeed = 5f;
     [SerializeField] private float _rotSpeed = 2f;
-    [SerializeField] private GameObject characterSprite;
+    [SerializeField] public GameObject characterSprite;
     private float _xAxis, _yAxis;
 
     [Header("Values")]

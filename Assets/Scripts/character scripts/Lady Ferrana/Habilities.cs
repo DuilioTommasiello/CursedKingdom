@@ -19,11 +19,11 @@ public class Habilities : MonoBehaviour
     [SerializeField] private float _ECoolDown = 3f;
 
     [Header("keys")]
-    [SerializeField] private KeyCode _WPower = KeyCode.W;
-    [SerializeField] private KeyCode _EPower = KeyCode.E;
-    [SerializeField] private KeyCode _QPower = KeyCode.Q;
-    [SerializeField] private KeyCode _basicAtack = KeyCode.Space;
-    [SerializeField] private KeyCode _swapKey = KeyCode.H;
+    [SerializeField] public KeyCode _WPower = KeyCode.W;
+    [SerializeField] public KeyCode _EPower = KeyCode.E;
+    [SerializeField] public KeyCode _QPower = KeyCode.Q;
+    [SerializeField] public KeyCode _basicAtack = KeyCode.Space;
+    [SerializeField] public KeyCode _swapKey = KeyCode.H;
 
 
 
