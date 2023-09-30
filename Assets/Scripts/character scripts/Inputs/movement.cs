@@ -6,7 +6,6 @@ public class movement : MonoBehaviour
 {
     [Header("Animator")]
     [SerializeField] public float _movSpeed = 5f;
-    [SerializeField] private float _rotSpeed = 2f;
     [SerializeField] public GameObject characterSprite;
     private float _xAxis, _yAxis;
 

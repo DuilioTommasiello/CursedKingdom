@@ -98,11 +98,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4571709424904615728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1548224bea92ba40b0910d91f47ae40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mov: {fileID: 6766401683520385277}
+  hab: {fileID: 0}
   dashSpeed: 15
 --- !u!70 &1478342669460499952
 CapsuleCollider2D:

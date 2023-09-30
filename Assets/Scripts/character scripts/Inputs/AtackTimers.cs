@@ -20,9 +20,7 @@ public class AtackTimers : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyLife>().GetDamage(damageDealt);
             Destroy(gameObject);
-
         }
-        
     }
 
  

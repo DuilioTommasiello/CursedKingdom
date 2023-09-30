@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-
-    public movement mov;
-    Habilities hab;
-
+    [SerializeField] public movement mov;
+    [SerializeField] public Habilities hab;
 
     [Header("values")]
     private float activeMoveSpeed;
@@ -18,13 +16,10 @@ public class Dash : MonoBehaviour
     private float dashCounter;
     private float dashCoolCounter;
 
-    private void Awake()
-    {
-        mov._PlayerRb = GetComponent<Rigidbody2D>();
-        activeMoveSpeed = mov._movSpeed;
-    }
+
     void Start()
     {
+        activeMoveSpeed = mov._movSpeed;
     }
 
     void Update()
