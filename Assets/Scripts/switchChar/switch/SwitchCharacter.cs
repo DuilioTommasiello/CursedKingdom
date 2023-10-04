@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class SwitchCharacter : MonoBehaviour
 {
     public GameObject Markus, Ferana;
+    public CinemachineVirtualCamera virtualCamera;
 
     int WitchAvatarIsOn = 0;
     private KeyCode SwitchCH = KeyCode.Tab;
@@ -18,8 +20,12 @@ public class SwitchCharacter : MonoBehaviour
         if (Input.GetKeyDown(SwitchCH))
         {
             switchCharacter();
+            virtualCamera.Follow = Markus.transform;
         }
-        
+        else if (Input.GetKeyDown(SwitchCH))
+        {
+            virtualCamera.Follow = Ferana.transform;
+        }
     }
 
     public void switchCharacter()
