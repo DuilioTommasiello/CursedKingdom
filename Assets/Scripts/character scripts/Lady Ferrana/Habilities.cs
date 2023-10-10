@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Habilities : MonoBehaviour
 {
+
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
     [SerializeField] public GameObject Wprefab;
@@ -34,6 +36,12 @@ public class Habilities : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("tuto");
+        }
+
         #region Timers
         #region Timer W
         if (Wready == false)
@@ -42,7 +50,6 @@ public class Habilities : MonoBehaviour
         }
         if (_Wcounter >= _WCoolDown && Wready == false)
         {
-            Debug.Log("The W timer has been reset");
             _Wcounter = 0;
             Wready = true;
         }
@@ -58,7 +65,6 @@ public class Habilities : MonoBehaviour
         }
         if (_Qcounter >= _QCoolDown && Qready == false)
         {
-            Debug.Log("The Q timer has been reset");
             _Qcounter = 0;
             Qready = true;
         }
@@ -74,7 +80,6 @@ public class Habilities : MonoBehaviour
         }
         if (_Ecounter >= _ECoolDown && Eready == false)
         {
-            Debug.Log("The E timer has been reset");
             _Ecounter = 0;
             Eready = true;
         }
@@ -90,7 +95,6 @@ public class Habilities : MonoBehaviour
         }
         if (_BasicCounter >= _basicCoolDown && basicReady == false)
         {
-            Debug.Log("The basic timer has been reset");
             _BasicCounter = 0;
             basicReady = true;
         }
@@ -111,7 +115,6 @@ public class Habilities : MonoBehaviour
         {
             Instantiate(basicAtack, basicArea.position, basicArea.rotation);
             basicReady = false;
-            Debug.Log(" you have use the Space");
 
         }
     }
@@ -122,7 +125,6 @@ public class Habilities : MonoBehaviour
         {
             Instantiate(Wprefab, basicArea.position, basicArea.rotation);
             Wready = false;
-            Debug.Log(" you have use the W");
         }
     }
         public virtual void qAbility ()
@@ -131,7 +133,6 @@ public class Habilities : MonoBehaviour
         {
             Instantiate(Qprefab, basicArea.position, basicArea.rotation);
             Qready = false;
-            Debug.Log("you have use the Q");
 
         }
     }
@@ -141,7 +142,6 @@ public class Habilities : MonoBehaviour
         {
             Instantiate(Eprefab, basicArea.position, basicArea.rotation);
             Eready = false;
-            Debug.Log("You hace use the W");
 
         }
     }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5278175151723347453}
   - component: {fileID: 8304657590976128304}
-  - component: {fileID: 4948852577232983884}
   - component: {fileID: 1823711394892287011}
   m_Layer: 0
   m_Name: HitArea
@@ -86,20 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4948852577232983884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8191158315480427295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bcef0d7e4316f04c95fe82f1c34a41f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lifeTime: 0.4
-  damageDealt: 10
 --- !u!61 &1823711394892287011
 BoxCollider2D:
   m_ObjectHideFlags: 0

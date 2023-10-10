@@ -13,7 +13,6 @@ public class Dagger_Behaviuor : MonoBehaviour
     public float _DgDestroy = 3f;
     public void FixedUpdate()
     {
-        Debug.Log(_DGcounter);
         if(Input.GetKey(_QPower))
         {
             _boolTest = false;

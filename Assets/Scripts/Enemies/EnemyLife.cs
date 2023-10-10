@@ -11,16 +11,13 @@ public class EnemyLife : MonoBehaviour
     private void Update()
     {
     }
-
-    public void GetDamage(int damageRecived)
+    public void recibeDMG(int dmg)
     {
-        _EnemLife -= damageRecived;
-        Debug.Log("the enemy has been hit and have " + _EnemLife + "life remaining");
-                
+        Debug.Log("enemy has been hit ");
+        _EnemLife -= dmg;
         if(_EnemLife <=0)
         {
             Destroy(gameObject);
         }
-
     }
 }

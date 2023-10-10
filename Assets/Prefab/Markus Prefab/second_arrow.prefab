@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2975906804505577389}
   - component: {fileID: 4254902701330780789}
   - component: {fileID: 5802521342746065879}
-  m_Layer: 0
+  - component: {fileID: -2592785648100218397}
+  m_Layer: 7
   m_Name: second_arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,3 +117,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lifeTime: 1.5
   damageDealt: 35
+--- !u!65 &-2592785648100218397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098332718859536902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 0.5000001, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

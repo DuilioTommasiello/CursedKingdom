@@ -11,7 +11,6 @@ public class movement : MonoBehaviour
 
     [Header("Values")]
     [SerializeField] private float _life = 200f;
-    [SerializeField] private float _mana = 500f;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
     public Rigidbody2D _PlayerRb;
@@ -19,8 +18,6 @@ public class movement : MonoBehaviour
     private Vector2 _actualVec;
 
 
-    [Header("keys")]
-    [SerializeField] private KeyCode _swapKey = KeyCode.H;
 
     [Header("Timers")]
     [SerializeField] private int characterIndex;
