@@ -258,7 +258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95990129}
   - component: {fileID: 95990130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311239934}
   - component: {fileID: 311239933}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barrelSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 558000998}
   - component: {fileID: 558000999}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boxSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2819,7 +2819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790811194}
   - component: {fileID: 1790811195}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -21,6 +21,10 @@ public class AtackTimers : MonoBehaviour
             collision.gameObject.GetComponent<EnemyLife>().GetDamage(damageDealt);
             Destroy(gameObject);
         }
+        //if(collision.gameObject.layer == 9)
+        //{
+        //    collision.gameObject.GetComponent<_boxHealt>.GetDamage(damageDealt);
+        //}
     }
 
  
