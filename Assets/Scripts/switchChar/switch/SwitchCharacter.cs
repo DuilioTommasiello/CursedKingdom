@@ -20,11 +20,11 @@ public class SwitchCharacter : MonoBehaviour
         if (Input.GetKeyDown(SwitchCH))
         {
             switchCharacter();
-            virtualCamera.Follow = Markus.transform;
+            
         }
         else if (Input.GetKeyDown(SwitchCH))
         {
-            virtualCamera.Follow = Ferana.transform;
+            
         }
     }
 
