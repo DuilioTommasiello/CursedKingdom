@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ScenePass : MonoBehaviour
 {
+    public int sceneBuildIndex;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
 
-    [SerializeField] public Transform player2;
+    
 }
