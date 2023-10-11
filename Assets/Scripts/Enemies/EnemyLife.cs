@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyLife : MonoBehaviour
 {
-    AtackTimers atk;
 
     [Header("Stats")]
     [SerializeField] public float _EnemLife = 50f;
@@ -14,18 +13,12 @@ public class EnemyLife : MonoBehaviour
     {
        
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer == 7)
-        {
-            atk.boxDMG();
-        }
-    }
+
     public void recibeDMG(int dmg)
     {
-        Debug.Log("enemy has been hit ");
+        Debug.Log("enemy has been hit and has " + _EnemLife + "life remaning ");
         _EnemLife -= dmg;
-        if(_EnemLife <=0)
+        if (_EnemLife <= 0)
         {
             Destroy(gameObject);
         }

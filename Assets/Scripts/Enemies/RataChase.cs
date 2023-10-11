@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class RataChase : MonoBehaviour
 {
-    public SwitchCharacter swNum;
     movement mov;
+    public SwitchCharacter swNum;
     public GameObject ferrana;
     public GameObject markus;
     public float speed = 2.5f;
+    public int damage = 5;
 
     private float distance;
  
@@ -35,6 +36,18 @@ public class RataChase : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, -angle);
             transform.position = Vector2.MoveTowards(this.transform.position, markus.transform.position, speed * Time.deltaTime);
  
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        movement player = other.gameObject.GetComponent<movement>();
+
+        if (other.gameObject.layer == 3)
+        {
+
+            Debug.Log("the rat has hit something");
+            player.getDmg(damage);
+
         }
     }
 

@@ -10,7 +10,7 @@ public class movement : MonoBehaviour
     private float _xAxis, _yAxis;
 
     [Header("Values")]
-    [SerializeField] public float _life = 200f;
+    [SerializeField] public float _life = 150;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
     public Rigidbody2D _PlayerRb;
@@ -88,5 +88,10 @@ public class movement : MonoBehaviour
         }
         #endregion    
 
+    }
+    public void getDmg(int dmg)
+    {
+        Debug.Log("the player has been hit and has" + _life + "");
+        _life -= dmg;
     }
   }

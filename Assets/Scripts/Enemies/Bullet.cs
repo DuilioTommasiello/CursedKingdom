@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     GameObject target;
-    public float speed;
+    [SerializeField]public float speed;
+    [SerializeField]public int _bulletdamage = 30;
     Rigidbody2D bulletRB;
     void Start()
     {
@@ -14,6 +15,17 @@ public class Bullet : MonoBehaviour
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
         Destroy(this.gameObject, 2);
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        movement player = collision.gameObject.GetComponent<movement>();
+            Debug.Log("the bullet has hit something");
+
+        if (collision.gameObject.layer == 3 )
+        {
+            player.getDmg(_bulletdamage);
+
+        }
     }
 
 

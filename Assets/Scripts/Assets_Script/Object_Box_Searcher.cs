@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class Object_Box_Searcher : MonoBehaviour
 {
-
     public float _boxHealt = 40;
-    public List<GameObject> objects = new List<GameObject>();    
+    public Transform SpawnObject;
+    //public List<Sprite> objects = new List<Sprite>();
 
-    void Update()
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.layer == 7)
+        {
+        Debug.Log("box has been hit and has " + _boxHealt + "life");
+
+        }
+        
+    }
+    public void boxDmg (int damage)
+    {
+        _boxHealt -= damage;
 
         if (_boxHealt <= 0)
         {
-            var randomNum = Random.Range(0, (6 + 1));
-            Instantiate(objects[randomNum]);
-            Destroy(gameObject);
+        
+            Destroy(gameObject, 2f);
         }
     }
-    public void recibeDMG(int dmg)
-    {
-        Debug.Log("box has been hit ");
 
-        _boxHealt -= dmg;
-        if (_boxHealt <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }

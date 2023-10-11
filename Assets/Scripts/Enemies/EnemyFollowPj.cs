@@ -27,7 +27,7 @@ public class EnemyFollowPj : MonoBehaviour
         }
         else if (distanceFromPlayer <= shootingRange && nextFireTime <Time.time)
         {
-            Instantiate(bullet, bullet.transform.position, Quaternion.identity);
+            Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate; 
         }
     }

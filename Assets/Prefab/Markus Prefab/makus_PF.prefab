@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4571709424904615729}
   - component: {fileID: 6766401683520385277}
-  - component: {fileID: 7741086787860105966}
   - component: {fileID: 1478342669460499952}
   - component: {fileID: 828328540076951107}
   m_Layer: 0
@@ -81,31 +80,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movSpeed: 5
-  _rotSpeed: 2
   characterSprite: {fileID: 8910372917596596397}
   _life: 200
-  _mana: 500
   _character: 0
   _playerIsMoving: 0
   _PlayerRb: {fileID: 0}
   _moveInput: {x: 0, y: 0}
-  _swapKey: 104
   characterIndex: 0
---- !u!114 &7741086787860105966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571709424904615728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1548224bea92ba40b0910d91f47ae40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mov: {fileID: 6766401683520385277}
-  hab: {fileID: 0}
-  dashSpeed: 15
 --- !u!70 &1478342669460499952
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
