@@ -10,7 +10,7 @@ public class movement : MonoBehaviour
     private float _xAxis, _yAxis;
 
     [Header("Values")]
-    [SerializeField] private float _life = 200f;
+    [SerializeField] public float _life = 200f;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
     public Rigidbody2D _PlayerRb;
@@ -40,6 +40,9 @@ public class movement : MonoBehaviour
             isMoving(moveX, moveY);
             move(moveX, moveY);
             rotations(moveX, moveY);
+        }else
+        {
+            Destroy(gameObject);
         }
     }
     

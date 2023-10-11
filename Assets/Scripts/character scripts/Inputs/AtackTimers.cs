@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AtackTimers : MonoBehaviour
-{    
-
+{
+    Object_Box_Searcher box;
     public float _lifeTime = 0.2f;
      public int damageDealt = 10;
 
@@ -29,13 +29,25 @@ public class AtackTimers : MonoBehaviour
                 enemy.recibeDMG(damageDealt);
                 Destroy(gameObject);
         }
-        if (collision.gameObject.layer == 9 && box != null)
+        if (collision.gameObject.layer == 9 )
         {
-                
-                Debug.Log("box has been hit ");
-                box.recibeDMG(damageDealt);
-                Destroy(gameObject);
+
+            boxDMG();
             
+        }
+    }
+
+    public void enemyDMG() 
+    {
+    }
+    public void boxDMG() 
+    {
+        Debug.Log("box has been hit ");
+
+        box._boxHealt -= damageDealt;
+        if (box._boxHealt <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
