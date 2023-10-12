@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class movement : MonoBehaviour
 {
@@ -43,6 +44,8 @@ public class movement : MonoBehaviour
         }else
         {
             Destroy(gameObject);
+            restartScene();
+
         }
     }
     
@@ -93,5 +96,9 @@ public class movement : MonoBehaviour
     {
         Debug.Log("the player has been hit and has" + _life + "");
         _life -= dmg;
+    }
+    void restartScene()
+    {
+        SceneManager.LoadScene("main menu");
     }
   }

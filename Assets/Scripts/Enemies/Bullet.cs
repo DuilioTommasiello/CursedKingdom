@@ -19,10 +19,10 @@ public class Bullet : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         movement player = collision.gameObject.GetComponent<movement>();
-            Debug.Log("the bullet has hit something");
 
         if (collision.gameObject.layer == 3 )
         {
+            Destroy(gameObject);
             player.getDmg(_bulletdamage);
 
         }
