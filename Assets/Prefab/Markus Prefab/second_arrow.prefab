@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 10
-  _atackSpeed: 10
+  _atackSpeed: 15
   _destroyTime: 1.5
   _basicAtack: 113
 --- !u!114 &5802521342746065879

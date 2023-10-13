@@ -27,13 +27,6 @@ public class Habilities : MonoBehaviour
     [SerializeField] public KeyCode _basicAtack = KeyCode.Space;
     [SerializeField] public KeyCode _swapKey = KeyCode.H;
 
-
-
-    void Start()
-    {
-
-    }
-
     void FixedUpdate()
     {
 
