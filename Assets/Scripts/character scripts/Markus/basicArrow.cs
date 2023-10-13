@@ -5,6 +5,8 @@ using UnityEngine;
 public class basicArrow : MonoBehaviour
 {
     Habilities habilitiesScript;
+    public GameObject hitEffect;
+    public GameObject Arrow;
 
     [Header("Values")]
     [SerializeField] public float distance;
@@ -20,8 +22,16 @@ public class basicArrow : MonoBehaviour
 
     }
 
+
     void atackMove()
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+                GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+                Destroy(effect, 0.5f);
+                Destroy(gameObject);  
     }
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemies
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: pj
     uniqueID: 943621991
+    locked: 0
+  - name: Habilities
+    uniqueID: 141617397
     locked: 0
