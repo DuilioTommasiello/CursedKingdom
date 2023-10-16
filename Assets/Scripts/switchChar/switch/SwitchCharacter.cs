@@ -7,6 +7,7 @@ public class SwitchCharacter : MonoBehaviour
 {
     public GameObject Markus, Ferana;
     public CinemachineVirtualCamera virtualCamera;
+    
 
     public int WitchAvatarIsOn = 0;
     public bool FeranaIsPLaying;
@@ -20,8 +21,10 @@ public class SwitchCharacter : MonoBehaviour
     {
         if (Input.GetKeyDown(SwitchCH))
         {
+            
             switchCharacter();
             
+
         }
         else if (Input.GetKeyDown(SwitchCH))
         {
@@ -30,7 +33,9 @@ public class SwitchCharacter : MonoBehaviour
     }
 
     public void switchCharacter()
-    {
+    {   
+        
+
         WitchAvatarIsOn++;
 
         if (WitchAvatarIsOn > 2)
@@ -39,8 +44,9 @@ public class SwitchCharacter : MonoBehaviour
 
         switch (WitchAvatarIsOn)
         {
-           
+          
           case 1:
+
                 Markus.gameObject.SetActive(false);
                 Ferana.gameObject.SetActive(true);
                 Ferana.transform.position = Markus.transform.position;
@@ -51,6 +57,7 @@ public class SwitchCharacter : MonoBehaviour
                 Markus.gameObject.SetActive(true);
                 Ferana.gameObject.SetActive(false);
                 FeranaIsPLaying = false;
+
                 Markus.transform.position = Ferana.transform.position;
                 break;
         }
