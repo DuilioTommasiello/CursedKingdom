@@ -7,6 +7,7 @@ public class Habilities : MonoBehaviour
 {
 
     [SerializeField] public Transform basicArea;
+    [SerializeField] public Transform secondaryArea;
     [SerializeField] public GameObject basicAtack;
     [SerializeField] public GameObject Wprefab;
     [SerializeField] public GameObject Qprefab;
@@ -133,7 +134,7 @@ public class Habilities : MonoBehaviour
     {
         if(Input.GetKey(_EPower) && Eready == true)
         {
-            Instantiate(Eprefab, basicArea.position, basicArea.rotation);
+            Instantiate(Eprefab, secondaryArea.position, basicArea.rotation);
             Eready = false;
 
         }
