@@ -94,7 +94,7 @@ public class movement : MonoBehaviour
     }
     public void getDmg(int dmg)
     {
-        Debug.Log("the player has been hit and has" + _life + "");
+        Debug.Log("the player has been hit and has " + _life + "remaning");
         _life -= dmg;
     }
     void restartScene()
