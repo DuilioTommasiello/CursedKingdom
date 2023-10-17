@@ -18,7 +18,6 @@ public class basicArrow : MonoBehaviour
         transform.Translate(Vector3.up * _atackSpeed * Time.deltaTime);
         Destroy(gameObject,_destroyTime);
 
-
     }
 
 
@@ -30,7 +29,7 @@ public class basicArrow : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
                 GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-                Destroy(effect, 0.5f);
+                Destroy(effect, 0.375f);
                 Destroy(gameObject);  
     }
 }
