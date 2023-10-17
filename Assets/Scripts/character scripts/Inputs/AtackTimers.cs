@@ -29,6 +29,7 @@ public class AtackTimers : MonoBehaviour
         {
             box.boxDmg(damageDealt);
         }
+        Destroy(gameObject);
     }
 
 
