@@ -115,11 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicArea: {fileID: 0}
-  basicAtack: {fileID: 0}
-  Wprefab: {fileID: 0}
-  Qprefab: {fileID: 0}
-  Eprefab: {fileID: 0}
+  basicArea: {fileID: 4571709424244402067}
+  basicAtack: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
+  Wprefab: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
+  Qprefab: {fileID: 5471325156760903172, guid: fde28e9614373de4f941805e48a29da4, type: 3}
+  Eprefab: {fileID: 2098332718859536902, guid: bd8d8f0a932f93d4d82015183b12e63d, type: 3}
   basicReady: 0
   Wready: 0
   Qready: 0
@@ -133,9 +133,9 @@ MonoBehaviour:
   _QCoolDown: 1
   _WCoolDown: 2
   _ECoolDown: 3
-  _WPower: 119
-  _EPower: 101
-  _QPower: 113
+  _WPower: 122
+  _EPower: 120
+  _QPower: 99
   _basicAtack: 32
   _swapKey: 104
 --- !u!1 &8910372917596596397
@@ -212,7 +212,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 790105047
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: -794644534, guid: a0a0b22ca72cb314495b1f934f9af08b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

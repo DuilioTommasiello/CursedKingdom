@@ -11,16 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/tuto.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/level1.unity
-    guid: add738d28c9405a49a2d0425636fecc3
-  - enabled: 1
-    path: Assets/Scenes/Level1 Cuarto4.unity
-    guid: 09db2c0a54decab4d9be62811cdf58bb
-  - enabled: 1
-    path: Assets/Scenes/Level1 Cuarto2.unity
-    guid: 86afe6442b2ab3b4db4f3be640f30daf
-  - enabled: 1
-    path: Assets/Scenes/Level1 Cuarto 3.unity
-    guid: 143bf071757cb774cab51d44d81452cb
   m_configObjects: {}

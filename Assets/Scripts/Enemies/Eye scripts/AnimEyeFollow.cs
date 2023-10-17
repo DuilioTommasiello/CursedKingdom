@@ -6,6 +6,7 @@ public class AnimEyeFollow : MonoBehaviour
 {
     [Header("Animator")]
     public SwitchCharacter swNum;
+    public CharacterChase chase;
     public GameObject ferrana;
     public GameObject markus;
     public Animator EyeAnim;
@@ -32,11 +33,10 @@ public class AnimEyeFollow : MonoBehaviour
         {
             directionX = markus.transform.position.x - transform.position.x;
             directionY = markus.transform.position.y - transform.position.y;
+
         }
         EyeAnim.SetFloat("enemyX", directionX);
-        EyeAnim.SetFloat("enemyY", directionY);    
+        EyeAnim.SetFloat("enemyY", directionY);  
     }
-
-
 
 }

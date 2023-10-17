@@ -12,7 +12,6 @@ public class basicArrow : MonoBehaviour
     [SerializeField] public float distance;
     [SerializeField] public float _atackSpeed;
     [SerializeField] public float _destroyTime = 1.5f;
-    [SerializeField] private KeyCode _basicAtack = KeyCode.Space;
 
     public void Update()
     {

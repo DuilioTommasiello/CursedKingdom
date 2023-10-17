@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class enemyPath : MonoBehaviour
 {
-    public CharacterChase ChSp;
+    public EyeChase EyeSP;
     public SwitchCharacter swNum;
-    public EyeShot shot;
     private enemyPath enmySC;
     public GameObject ferrana;
     public GameObject markus;
@@ -18,13 +17,14 @@ public class enemyPath : MonoBehaviour
 
     [SerializeField] List<Transform> wayPoints;
     public int Speed = 2;
+    public bool NeedShot;
     int nextPos = 0;
 
     private void Awake()
     {
         enmySC = GetComponent<enemyPath>();
-        ChSp = GetComponent<CharacterChase>();
-        shot = GetComponent<EyeShot>();
+        EyeSP = GetComponent<EyeChase>();
+
     }
 
     void Update()
@@ -45,11 +45,12 @@ public class enemyPath : MonoBehaviour
         if (playerDistance > chasedistance )
         {
             patroll();
+            NeedShot = false;
         }else
         {
-            ChSp.enabled = true;
-            shot.enabled = true;
+            EyeSP.enabled = true;
             enmySC.enabled = false;
+            NeedShot = true;
         }
     }
 

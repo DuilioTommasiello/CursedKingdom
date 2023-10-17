@@ -42,16 +42,5 @@ public class EyeChase : MonoBehaviour
             }
         }
         }
-    private void OnTriggerStay(Collider other)
-    {
-        movement player = other.gameObject.GetComponent<movement>();
 
-        if (other.gameObject.layer == 3)
-        {
-
-            Debug.Log("the rat has hit something");
-            player.getDmg(damage);
-
-        }
-    }
 }

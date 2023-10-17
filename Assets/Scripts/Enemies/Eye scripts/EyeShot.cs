@@ -5,6 +5,7 @@ using UnityEngine;
 public class EyeShot : MonoBehaviour
 {
      public EnemyLife enmSC;
+    public enemyPath enmPH;
 
     [Header("bullet objects")]
     public Transform bulletSpawn;
@@ -16,11 +17,14 @@ public class EyeShot : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(enmPH.NeedShot == true)
+        {
         bulletTimer += Time.fixedDeltaTime;
         if(enmSC._EnemLife > 0 && bulletTimer >= finalBulletTimer )
         {
             Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
             bulletTimer = 0;
+        }
         }
     }
 }
