@@ -133,7 +133,11 @@ public class Habilities : MonoBehaviour
     {
         if(Input.GetKey(_EPower) && Eready == true)
         {
+<<<<<<< HEAD
             Instantiate(Eprefab, basicArea.position, basicArea.rotation);
+=======
+            Instantiate(Eprefab, secondaryArea.position, basicArea.rotation);
+>>>>>>> parent of 5118b0d (creacion del esqueleto con animaciones)
             Eready = false;
 
         }

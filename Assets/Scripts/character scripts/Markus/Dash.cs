@@ -28,7 +28,7 @@ public class Dash : MonoBehaviour
         Debug.Log("timer 2:" + dashCoolCounter);
         mov._PlayerRb.velocity = mov._moveInput * activeMoveSpeed;
        
-        if (Input.GetKey(hab._XPower))
+        if (Input.GetKey(hab._EPower))
         {
             if (dashCoolCounter <= 0 && dashCounter <= 0)
             {
