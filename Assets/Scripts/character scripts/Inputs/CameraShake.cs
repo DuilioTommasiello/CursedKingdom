@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-//Aca agregue el Using Cinemachine
 
 public class CameraShake : MonoBehaviour
 {   
@@ -30,7 +29,7 @@ public class CameraShake : MonoBehaviour
         timer = ShakeTime;
     }
 
-    void StopShake()
+    public void StopShake()
     {
         CinemachineBasicMultiChannelPerlin _cbmcp = CinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         _cbmcp.m_AmplitudeGain = 0;

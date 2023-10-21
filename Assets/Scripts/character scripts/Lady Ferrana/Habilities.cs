@@ -8,24 +8,23 @@ public class Habilities : MonoBehaviour
 
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
-    [SerializeField] public GameObject Wprefab;
-    [SerializeField] public GameObject Qprefab;
-    [SerializeField] public GameObject Eprefab;
-    [SerializeField] public bool basicReady, Wready, Qready, Eready = true;
+    [SerializeField] public GameObject Zprefab;
+    [SerializeField] public GameObject Xprefab;
+    [SerializeField] public GameObject Cprefab;
+    [SerializeField] public bool basicReady, Zready, Xready, Cready = true;
 
     [Header("timers")]
-    [SerializeField] private float _BasicCounter, _Qcounter, _Wcounter, _Ecounter, _Rcounter;
+    [SerializeField] private float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
     [SerializeField] private float _basicCoolDown = 0.5f;
-    [SerializeField] private float _QCoolDown = 1f;
-    [SerializeField] private float _WCoolDown = 2f;
-    [SerializeField] private float _ECoolDown = 3f;
+    [SerializeField] private float _ZCoolDown = 1f;
+    [SerializeField] private float _XCoolDown = 2f;
+    [SerializeField] private float _CCoolDown = 3f;
 
     [Header("keys")]
-    [SerializeField] public KeyCode _WPower = KeyCode.W;
-    [SerializeField] public KeyCode _EPower = KeyCode.E;
-    [SerializeField] public KeyCode _QPower = KeyCode.Q;
+    [SerializeField] public KeyCode _ZPower = KeyCode.Z;
+    [SerializeField] public KeyCode _XPower = KeyCode.X;
+    [SerializeField] public KeyCode _CPower = KeyCode.C;
     [SerializeField] public KeyCode _basicAtack = KeyCode.Space;
-    [SerializeField] public KeyCode _swapKey = KeyCode.H;
 
     void FixedUpdate()
     {
@@ -37,46 +36,46 @@ public class Habilities : MonoBehaviour
 
         #region Timers
         #region Timer W
-        if (Wready == false)
+        if (Zready == false)
         {
-            _Wcounter += Time.deltaTime;
+            _Xcounter += Time.deltaTime;
         }
-        if (_Wcounter >= _WCoolDown && Wready == false)
+        if (_Xcounter >= _XCoolDown && Zready == false)
         {
-            _Wcounter = 0;
-            Wready = true;
+            _Xcounter = 0;
+            Zready = true;
         }
-        if (Input.GetKey(_WPower) && Wready == true)
+        if (Input.GetKey(_ZPower) && Zready == true)
         {
             wAbility();
         }
         #endregion
         #region Timer Q
-        if (Qready == false)
+        if (Xready == false)
         {
-            _Qcounter += Time.deltaTime;
+            _Zcounter += Time.deltaTime;
         }
-        if (_Qcounter >= _QCoolDown && Qready == false)
+        if (_Zcounter >= _ZCoolDown && Xready == false)
         {
-            _Qcounter = 0;
-            Qready = true;
+            _Zcounter = 0;
+            Xready = true;
         }
-        if (Input.GetKey(_QPower) && Qready == true)
+        if (Input.GetKey(_CPower) && Xready == true)
         {
             qAbility();
         }
         #endregion
         #region Timer E
-        if (Eready == false)
+        if (Cready == false)
         {
-            _Ecounter += Time.deltaTime;
+            _Ccounter += Time.deltaTime;
         }
-        if (_Ecounter >= _ECoolDown && Eready == false)
+        if (_Ccounter >= _CCoolDown && Cready == false)
         {
-            _Ecounter = 0;
-            Eready = true;
+            _Ccounter = 0;
+            Cready = true;
         }
-        if (Input.GetKey(_EPower) && Eready == true)
+        if (Input.GetKey(_XPower) && Cready == true)
         {
             eAbility();
         }
@@ -114,27 +113,27 @@ public class Habilities : MonoBehaviour
 
         public virtual void wAbility()
     {
-        if (Input.GetKey(_WPower) && Wready == true)
+        if (Input.GetKey(_ZPower) && Zready == true)
         {
-            Instantiate(Wprefab, basicArea.position, basicArea.rotation);
-            Wready = false;
+            Instantiate(Zprefab, basicArea.position, basicArea.rotation);
+            Zready = false;
         }
     }
         public virtual void qAbility ()
     {
-        if(Input.GetKey(_QPower) && Qready == true)
+        if(Input.GetKey(_CPower) && Xready == true)
         {
-            Instantiate(Qprefab, basicArea.position, basicArea.rotation);
-            Qready = false;
+            Instantiate(Xprefab, basicArea.position, basicArea.rotation);
+            Xready = false;
 
         }
     }
         public virtual void eAbility()
     {
-        if(Input.GetKey(_EPower) && Eready == true)
+        if(Input.GetKey(_XPower) && Cready == true)
         {
-            Instantiate(Eprefab, basicArea.position, basicArea.rotation);
-            Eready = false;
+            Instantiate(Cprefab, basicArea.position, basicArea.rotation);
+            Cready = false;
 
         }
     }
