@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434dd40771658b64cb2a088f9e814520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 3574691068153597931, guid: 253a4d32a079c6842a2b1fe7a04565c7, type: 3}
+  hitEffect: {fileID: 3574691068153597931, guid: 1270e1028ec14ee42812e776a2255f66, type: 3}
   Arrow: {fileID: 8785375203781158088}
   distance: 5
   _atackSpeed: 14
