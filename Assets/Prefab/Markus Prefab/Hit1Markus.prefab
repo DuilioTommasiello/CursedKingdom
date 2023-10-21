@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3308512291305342906}
   - component: {fileID: 4423915880981875102}
   - component: {fileID: 8513830511740343255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hit1Markus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 141617397
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 985692513, guid: f508863bc56d1064681e3c286ace3d86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
