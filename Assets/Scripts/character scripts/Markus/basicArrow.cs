@@ -26,10 +26,11 @@ public class basicArrow : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-                GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-                Destroy(effect, 0.375f);
-                Destroy(gameObject);  
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 0.375f);
+        Destroy(gameObject);
     }
 }

@@ -9870,7 +9870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654237458331204954, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6684011889373158708, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: Cprefab
@@ -9924,7 +9924,7 @@ PrefabInstance:
     - target: {fileID: 828328540076951107, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: Cprefab
       value: 
-      objectReference: {fileID: 2024637622783513688, guid: 5b6ed721e5fb005408bda13107c51ab6, type: 3}
+      objectReference: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
     - target: {fileID: 828328540076951107, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: Eprefab
       value: 
@@ -9940,7 +9940,7 @@ PrefabInstance:
     - target: {fileID: 828328540076951107, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: Xprefab
       value: 
-      objectReference: {fileID: 2098332718859536902, guid: bd8d8f0a932f93d4d82015183b12e63d, type: 3}
+      objectReference: {fileID: 1443629869574639292, guid: 5b6ed721e5fb005408bda13107c51ab6, type: 3}
     - target: {fileID: 828328540076951107, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: Zprefab
       value: 
@@ -9973,6 +9973,14 @@ PrefabInstance:
       propertyPath: basicAtack
       value: 
       objectReference: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
+    - target: {fileID: 4013371445876675595, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013371445876675595, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 943621991
+      objectReference: {fileID: 0}
     - target: {fileID: 4571709423492045218, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -9995,7 +10003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571709424244402067, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 4571709424904615728, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_Name
