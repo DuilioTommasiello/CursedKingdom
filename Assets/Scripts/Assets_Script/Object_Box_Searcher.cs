@@ -60,6 +60,8 @@ public class Object_Box_Searcher : MonoBehaviour
         {
             Instantiate(objects[5], spawnPoint.position, spawnPoint.rotation);
         }
+
+
     }
 
 

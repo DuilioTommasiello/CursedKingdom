@@ -8,15 +8,12 @@ public class AtackTimers : MonoBehaviour
     public float _lifeTime = 0.2f;
     public int damageDealt = 10;
 
-    public void Awake()
-    {
-        
-    }
+
     public void Update()
     {
         Destroy(gameObject, _lifeTime);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
         Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
@@ -24,12 +21,19 @@ public class AtackTimers : MonoBehaviour
         if (collision.gameObject.layer == 6 && enemy != null)
         {
             enemy.recibeDMG(damageDealt);
+            Destroy(gameObject, 2f);
+
         }
         if (box != null && collision.gameObject.layer == 9)
         {
             box.boxDmg(damageDealt);
+            Destroy(gameObject, 2f);
         }
-        Destroy(gameObject);
+        if (collision.gameObject.layer == 8 )
+        {
+            Destroy(gameObject, 2f);
+
+        }
     }
 
 

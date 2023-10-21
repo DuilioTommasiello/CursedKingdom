@@ -11,7 +11,7 @@ public class Habilities : MonoBehaviour
     [SerializeField] public GameObject Zprefab;
     [SerializeField] public GameObject Xprefab;
     [SerializeField] public GameObject Cprefab;
-    [SerializeField] public bool basicReady, Wready, Qready, Eready = true;
+    [SerializeField] public bool basicReady, Zready, Xready, Cready = true;
 
     [Header("timers")]
     [SerializeField] private float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
@@ -36,46 +36,46 @@ public class Habilities : MonoBehaviour
 
         #region Timers
         #region Timer W
-        if (Wready == false)
+        if (Zready == false)
         {
             _Xcounter += Time.deltaTime;
         }
-        if (_Xcounter >= _XCoolDown && Wready == false)
+        if (_Xcounter >= _XCoolDown && Zready == false)
         {
             _Xcounter = 0;
-            Wready = true;
+            Zready = true;
         }
-        if (Input.GetKey(_ZPower) && Wready == true)
+        if (Input.GetKey(_ZPower) && Zready == true)
         {
             wAbility();
         }
         #endregion
         #region Timer Q
-        if (Qready == false)
+        if (Xready == false)
         {
             _Zcounter += Time.deltaTime;
         }
-        if (_Zcounter >= _ZCoolDown && Qready == false)
+        if (_Zcounter >= _ZCoolDown && Xready == false)
         {
             _Zcounter = 0;
-            Qready = true;
+            Xready = true;
         }
-        if (Input.GetKey(_CPower) && Qready == true)
+        if (Input.GetKey(_CPower) && Xready == true)
         {
             qAbility();
         }
         #endregion
         #region Timer E
-        if (Eready == false)
+        if (Cready == false)
         {
             _Ccounter += Time.deltaTime;
         }
-        if (_Ccounter >= _CCoolDown && Eready == false)
+        if (_Ccounter >= _CCoolDown && Cready == false)
         {
             _Ccounter = 0;
-            Eready = true;
+            Cready = true;
         }
-        if (Input.GetKey(_XPower) && Eready == true)
+        if (Input.GetKey(_XPower) && Cready == true)
         {
             eAbility();
         }
@@ -113,27 +113,27 @@ public class Habilities : MonoBehaviour
 
         public virtual void wAbility()
     {
-        if (Input.GetKey(_ZPower) && Wready == true)
+        if (Input.GetKey(_ZPower) && Zready == true)
         {
             Instantiate(Zprefab, basicArea.position, basicArea.rotation);
-            Wready = false;
+            Zready = false;
         }
     }
         public virtual void qAbility ()
     {
-        if(Input.GetKey(_CPower) && Qready == true)
+        if(Input.GetKey(_CPower) && Xready == true)
         {
             Instantiate(Xprefab, basicArea.position, basicArea.rotation);
-            Qready = false;
+            Xready = false;
 
         }
     }
         public virtual void eAbility()
     {
-        if(Input.GetKey(_XPower) && Eready == true)
+        if(Input.GetKey(_XPower) && Cready == true)
         {
             Instantiate(Cprefab, basicArea.position, basicArea.rotation);
-            Eready = false;
+            Cready = false;
 
         }
     }
