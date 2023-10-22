@@ -16,9 +16,9 @@ public class Habilities : MonoBehaviour
     [Header("timers")]
     [SerializeField] private float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
     [SerializeField] private float _basicCoolDown = 0.5f;
-    [SerializeField] private float _ZCoolDown = 1f;
-    [SerializeField] private float _XCoolDown = 2f;
-    [SerializeField] private float _CCoolDown = 3f;
+    [SerializeField] public float _ZCoolDown = 1f;
+    [SerializeField] public float _XCoolDown = 2f;
+    [SerializeField] public float _CCoolDown = 3f;
 
     [Header("keys")]
     [SerializeField] public KeyCode _ZPower = KeyCode.Z;

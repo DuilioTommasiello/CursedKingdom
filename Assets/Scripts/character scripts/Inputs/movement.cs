@@ -11,22 +11,26 @@ public class movement : MonoBehaviour
     private float _xAxis, _yAxis;
 
     [Header("Values")]
-    [SerializeField] public float _life = 150;
+    [SerializeField] public float _life;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
     public Rigidbody2D _PlayerRb;
     public Vector2 _moveInput;
     private Vector2 _actualVec;
-
+    [SerializeField] private BarlifeModifer barLife;
 
 
     [Header("Timers")]
     [SerializeField] private int characterIndex;
 
+    private void Start()
+    {
+        barLife.initialBarLife(_life);
+    }
     private void Awake()
     {
         _PlayerRb = GetComponent<Rigidbody2D>();
-
+        
     }
 
     private void Update()
@@ -94,6 +98,7 @@ public class movement : MonoBehaviour
     }
     public void getDmg(int dmg)
     {
+        barLife.changeActulLife(_life);
         Debug.Log("the player has been hit and has " + _life + "remaning");
         _life -= dmg;
     }
