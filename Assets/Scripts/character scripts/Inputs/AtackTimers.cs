@@ -13,7 +13,8 @@ public class AtackTimers : MonoBehaviour
     {
         Destroy(gameObject, _lifeTime);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
         Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
@@ -29,7 +30,7 @@ public class AtackTimers : MonoBehaviour
             box.boxDmg(damageDealt);
             Destroy(gameObject, 2f);
         }
-        if (collision.gameObject.layer == 8 )
+        if (collision.gameObject.layer == 8)
         {
             Destroy(gameObject, 2f);
 

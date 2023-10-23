@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: -5311463721930493923}
   - component: {fileID: 4080274539195369702}
   - component: {fileID: 1861298676643656451}
-  m_Layer: 0
+  - component: {fileID: 789494323410177874}
+  m_Layer: 7
   m_Name: Flecha Fuerte 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434dd40771658b64cb2a088f9e814520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 3644128963366883524, guid: 1968b84da56fdeb49a897f03861e4174, type: 3}
   Arrow: {fileID: 6484617401747292312}
+  effectTimer: 0.458
   distance: 4
   _atackSpeed: 10
   _destroyTime: 1.5
@@ -138,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0022329837, y: 0.19429919}
+  m_Offset: {x: 0.0022329837, y: 0.16787054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,5 +151,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2774022, y: 0.4114017}
+  m_Size: {x: 0.2774022, y: 0.35854438}
   m_EdgeRadius: 0
+--- !u!114 &789494323410177874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484617401747292312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcef0d7e4316f04c95fe82f1c34a41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeTime: 5
+  damageDealt: 20

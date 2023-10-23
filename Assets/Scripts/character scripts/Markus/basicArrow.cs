@@ -7,6 +7,7 @@ public class basicArrow : MonoBehaviour
     Habilities habilitiesScript;
     public GameObject hitEffect;
     public GameObject Arrow;
+    public float effectTimer;
 
     [Header("Values")]
     [SerializeField] public float distance;
@@ -29,8 +30,9 @@ public class basicArrow : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.375f);
         Destroy(gameObject);
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, effectTimer);
+        
     }
 }

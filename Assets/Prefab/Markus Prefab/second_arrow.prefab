@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 3574691068153597931, guid: 253a4d32a079c6842a2b1fe7a04565c7, type: 3}
   Arrow: {fileID: 2098332718859536902}
+  effectTimer: 0.375
   distance: 10
   _atackSpeed: 15
   _destroyTime: 1.5
