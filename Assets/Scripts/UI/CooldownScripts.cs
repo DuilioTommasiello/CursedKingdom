@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class CooldownScripts : MonoBehaviour
 {
-     private Habilities coldwn;
+     public Habilities coldwn;
+    
 
     [Header("Z")]
     public Image abilityImgae1;
@@ -72,7 +73,7 @@ public class CooldownScripts : MonoBehaviour
 
     void cAbiliti()
     {
-        if (Input.GetKey(coldwn._ZPower) && isCoolDown3 == false)
+        if (Input.GetKey(coldwn._CPower) && isCoolDown3 == false)
         {
             isCoolDown3 = true;
             abilityImgae3.fillAmount = 1;

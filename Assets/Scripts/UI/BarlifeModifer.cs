@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class BarlifeModifer : MonoBehaviour
 {
-    private Slider slider;
+    public Slider slider;
 
-    private void Start()
+    private void Awake()
     {
         slider = GetComponent<Slider>();
     }

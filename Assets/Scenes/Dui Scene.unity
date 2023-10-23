@@ -706,6 +706,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &942568191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2184927094857823816, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+  m_PrefabInstance: {fileID: 1724507532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &942568192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6684011889373158708, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+  m_PrefabInstance: {fileID: 1724507532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942568191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1106502680
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc655571eca348a4bb4ddd69f1c541ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coldwn: {fileID: 942568192}
   abilityImgae1: {fileID: 1410042179}
   abilityImgae2: {fileID: 1272306085}
   abilityImgae3: {fileID: 1660532890}
@@ -1294,6 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cedabd028eef77a46ac9c203106e9ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!4 &1582536013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571709424244402067, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
@@ -1780,6 +1798,7 @@ GameObject:
   - component: {fileID: 1888205405}
   - component: {fileID: 1888205404}
   - component: {fileID: 1888205403}
+  - component: {fileID: 1888205406}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1853,6 +1872,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888205406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888205402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afbd3ce40d2bf54196a53b4673a3de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Markus: {fileID: 2092072013}
+  Ferana: {fileID: 942568191}
+  virtualCamera: {fileID: 0}
+  WitchAvatarIsOn: 0
+  FeranaIsPLaying: 0
 --- !u!1 &2073668516
 GameObject:
   m_ObjectHideFlags: 0
