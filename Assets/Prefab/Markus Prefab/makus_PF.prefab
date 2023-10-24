@@ -86,6 +86,7 @@ MonoBehaviour:
   _playerIsMoving: 0
   _PlayerRb: {fileID: 0}
   _moveInput: {x: 0, y: 0}
+  barLife: {fileID: 0}
   characterIndex: 0
 --- !u!70 &1478342669460499952
 CapsuleCollider2D:
@@ -117,27 +118,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicArea: {fileID: 4571709424244402067}
   basicAtack: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
-  Wprefab: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
-  Qprefab: {fileID: 5471325156760903172, guid: fde28e9614373de4f941805e48a29da4, type: 3}
-  Eprefab: {fileID: 2098332718859536902, guid: bd8d8f0a932f93d4d82015183b12e63d, type: 3}
+  Zprefab: {fileID: 0}
+  Xprefab: {fileID: 0}
+  Cprefab: {fileID: 0}
   basicReady: 0
-  Wready: 0
-  Qready: 0
-  Eready: 0
+  Zready: 0
+  Xready: 0
+  Cready: 1
   _BasicCounter: 0
-  _Qcounter: 0
-  _Wcounter: 0
-  _Ecounter: 0
-  _Rcounter: 0
+  _Zcounter: 0
+  _Xcounter: 0
+  _Ccounter: 0
   _basicCoolDown: 0.5
-  _QCoolDown: 1
-  _WCoolDown: 2
-  _ECoolDown: 3
-  _WPower: 122
-  _EPower: 120
-  _QPower: 99
+  _ZCoolDown: 1
+  _XCoolDown: 2
+  _CCoolDown: 3
+  _ZPower: 122
+  _XPower: 120
+  _CPower: 99
   _basicAtack: 32
-  _swapKey: 104
 --- !u!1 &8910372917596596397
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +192,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
