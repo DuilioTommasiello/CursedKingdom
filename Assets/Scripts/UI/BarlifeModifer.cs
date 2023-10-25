@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class BarlifeModifer : MonoBehaviour
 {
     public Slider slider;
-    public SwitchCharacter swNum;
 
     private void Awake()
     {
         slider = GetComponent<Slider>();
-        
     }
 
     public void changeMaxLife(float maxLife)
