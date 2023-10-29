@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterChase : MonoBehaviour
 {
     public Vector2 direction;
-
     [Header("chase values")]
     [SerializeField] public float chasedistance = 10f;
     public float playerDistance;
