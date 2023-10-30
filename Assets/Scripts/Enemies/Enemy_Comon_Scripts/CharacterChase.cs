@@ -14,7 +14,7 @@ public class CharacterChase : MonoBehaviour
     public SwitchCharacter swNum;
     public GameObject ferrana;
     public GameObject markus;
-    public float speed = 2.5f;
+    public float speed = 3f;
     public int damage = 5;
     private float distance;
 
@@ -24,12 +24,10 @@ public class CharacterChase : MonoBehaviour
         if (swNum.FeranaIsPLaying == true)
         {
             chaseF();
-           
         }
         else
         {
             chaseM();
-
         }
     }
     public void chaseF() 

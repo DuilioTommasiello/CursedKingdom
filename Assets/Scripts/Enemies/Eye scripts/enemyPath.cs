@@ -30,7 +30,6 @@ public class enemyPath : MonoBehaviour
 
     void Update()
     {
-        // esto calcula la distancia para cada personaje 
         if (swNum.FeranaIsPLaying == true)
         {
 
