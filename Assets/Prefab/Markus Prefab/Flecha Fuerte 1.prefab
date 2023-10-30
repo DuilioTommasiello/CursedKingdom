@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006088710}
   - component: {fileID: 2006088711}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 4080274539195369702}
   - component: {fileID: 1861298676643656451}
   - component: {fileID: 789494323410177874}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Flecha Fuerte 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

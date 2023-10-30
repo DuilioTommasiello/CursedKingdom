@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3308512291305342906}
   - component: {fileID: 4423915880981875102}
   - component: {fileID: 8513830511740343255}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hit1Markus
   m_TagString: Untagged
   m_Icon: {fileID: 0}

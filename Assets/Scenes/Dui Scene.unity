@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnLi: {fileID: 1872172109}
   boxCol: {fileID: 1872172115}
-  shieldState: 3
+  shieldState: 0
 --- !u!61 &1196738498
 BoxCollider2D:
   m_ObjectHideFlags: 0
