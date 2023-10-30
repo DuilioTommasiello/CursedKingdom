@@ -7,6 +7,7 @@ public class LocateCharacter : MonoBehaviour
     public SwitchCharacter swNum;
     public GameObject ferrna;
     public GameObject markus;
+
     private void FixedUpdate()
     {
         if (swNum.FeranaIsPLaying == true)
@@ -18,7 +19,4 @@ public class LocateCharacter : MonoBehaviour
             transform.position = markus.transform.position;
         }
     }
-
-    
-
 }
