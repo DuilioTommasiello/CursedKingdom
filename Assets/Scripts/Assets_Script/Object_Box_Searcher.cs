@@ -23,9 +23,7 @@ public class Object_Box_Searcher : MonoBehaviour
         if(collision.gameObject.layer == 7)
         {
         Debug.Log("box has been hit and has " + _boxHealt + "life");
-
         }
-        
     }
     public void boxDmg (int damage)
     {

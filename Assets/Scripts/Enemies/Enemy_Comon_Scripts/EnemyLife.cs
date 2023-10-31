@@ -9,10 +9,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] public float _EnemLife = 50f;
     private GameObject _enemy;
 
-    private void Update()
-    {
-       
-    }
+
 
     public void recibeDMG(int dmg)
     {

@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
         Destroy(this.gameObject, 2);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         movement player = collision.gameObject.GetComponent<movement>();
 
@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
 
 }

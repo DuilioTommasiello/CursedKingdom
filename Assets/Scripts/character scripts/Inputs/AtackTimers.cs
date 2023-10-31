@@ -22,6 +22,7 @@ public class AtackTimers : MonoBehaviour
         if (collision.gameObject.layer == 6 && enemy != null)
         {
             enemy.recibeDMG(damageDealt);
+            Debug.Log("you has hit something");
             Destroy(gameObject, 2f);
 
         }

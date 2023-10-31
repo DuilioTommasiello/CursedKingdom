@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Ratatack : MonoBehaviour
 {
+    [SerializeField] CharacterChase chsp;
     private int Ratdmg = 10;
+    private bool needToStop = false;
     private int index;
-
+    private float timer;
+    private void FixedUpdate()
+    {
+        Debug.Log(timer);
+        if(needToStop == true)
+        {
+            chsp.speed = 0;
+            chsp.chasedistance = 20;
+            timer += Time.fixedDeltaTime;
+        }
+        if(timer >= 1)
+        {
+            needToStop = false;
+            chsp.speed = 3;         
+            timer = 0;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,13 +35,12 @@ public class Ratatack : MonoBehaviour
             {
             player.getDmg(Ratdmg);
             index++;
-                Debug.Log("se ejecuto" + index);
+            needToStop = true;
             }
-            else if (index == 2)
+            if (index == 1 && needToStop == false)
             {
             player.getDmg(Ratdmg*2);
              Destroy(gameObject);
-                Debug.Log("se ejecuto" + index);
             }
 
         }
