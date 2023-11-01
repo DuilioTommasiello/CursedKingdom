@@ -7,7 +7,9 @@ public class Habilities : MonoBehaviour
 {
     [Header("animations")]
     [SerializeField] public GameObject characterSprite;
-    
+    public bool isAtacking;
+
+
 
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
@@ -28,6 +30,8 @@ public class Habilities : MonoBehaviour
     [SerializeField] public KeyCode _XPower = KeyCode.X;
     [SerializeField] public KeyCode _CPower = KeyCode.C;
     [SerializeField] public KeyCode _basicAtack = KeyCode.Space;
+
+    
 
     void FixedUpdate()
     {

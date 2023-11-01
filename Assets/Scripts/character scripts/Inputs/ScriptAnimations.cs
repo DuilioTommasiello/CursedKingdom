@@ -7,7 +7,7 @@ public class ScriptAnimations : MonoBehaviour
     [Header("Animator")]
     public Animator playerAnimator;
     public bool isMoving;
-    public bool isAtcking;
+    public bool isAtacking;
 
     private movement mov;
     private Habilities Hab;
@@ -37,17 +37,18 @@ public class ScriptAnimations : MonoBehaviour
             playerAnimator.SetFloat("LastVert", LastmoveY);
             playerAnimator.SetBool("isMoving", isMoving = true);
         }
-        //if (Hab.basicAtack && isAtcking == true)
-        //{
-        //    Hab.basicAtacks();
-        //    playerAnimator.SetBool("isAtcking", isAtcking = true);
-        //}
+        if (Hab.isAtacking == true)
+        {
+            playerAnimator.SetBool("isAtacking", isAtacking = true);
+        }
         else
         {
             playerAnimator.SetBool("isMoving", isMoving = false);
-            //playerAnimator.SetBool("isAtcking", isAtcking = false);
+            //playerAnimator.SetBool("isAtacking", isAtacking = false);
+
+
         }
-      }
+    }
 
  
 

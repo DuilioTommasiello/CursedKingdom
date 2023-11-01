@@ -1340,6 +1340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1457223801, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823816, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_Name
       value: Ferrana
@@ -1350,11 +1354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9513235
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3902202
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1388,6 +1392,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6684011889373158708, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 2120944683}
+    - target: {fileID: 6684011889373158708, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: 2120944681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0935504424aee384190b4e2559961c5d, type: 3}
 --- !u!1 &2084637208
@@ -1495,3 +1507,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2120944681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2857127634804340483, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+  m_PrefabInstance: {fileID: 2076736966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2120944683 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5045431874253867041, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+  m_PrefabInstance: {fileID: 2076736966}
+  m_PrefabAsset: {fileID: 0}
