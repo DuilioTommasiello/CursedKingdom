@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Habilities : MonoBehaviour
 {
+    [Header("animations")]
+    [SerializeField] public GameObject characterSprite;
+    
 
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
@@ -107,7 +110,6 @@ public class Habilities : MonoBehaviour
         {
             Instantiate(basicAtack, basicArea.position, basicArea.rotation);
             basicReady = false;
-
         }
     }
 
@@ -137,5 +139,7 @@ public class Habilities : MonoBehaviour
 
         }
     }
+
+    
 }
 
