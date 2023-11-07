@@ -11,7 +11,6 @@ public class Ratatack : MonoBehaviour
     private float timer;
     private void FixedUpdate()
     {
-        Debug.Log(timer);
         if(needToStop == true)
         {
             chsp.speed = 0;

@@ -7,7 +7,7 @@ public class Habilities : MonoBehaviour
 {
     [Header("animations")]
     [SerializeField] public GameObject characterSprite;
-    public bool isAtacking;
+    public bool HasAtacking;
 
 
 
@@ -17,9 +17,10 @@ public class Habilities : MonoBehaviour
     [SerializeField] public GameObject Xprefab;
     [SerializeField] public GameObject Cprefab;
     [SerializeField] public bool basicReady, Zready, Xready, Cready = true;
+     public bool basicEnd, ZEnd, XEnd, CEnd = false;
 
     [Header("timers")]
-    [SerializeField] private float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
+    [SerializeField] public float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
     [SerializeField] private float _basicCoolDown = 0.5f;
     [SerializeField] public float _ZCoolDown = 1f;
     [SerializeField] public float _XCoolDown = 2f;
@@ -35,56 +36,62 @@ public class Habilities : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            SceneManager.LoadScene("Bauti Scene");
+        }
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("tuto");
         }
-
         #region Timers
-        #region Timer W
+        #region Timer z
         if (Zready == false)
         {
-            _Xcounter += Time.deltaTime;
+            _Zcounter += Time.deltaTime;
         }
-        if (_Xcounter >= _XCoolDown && Zready == false)
+        if (_Zcounter >= _ZCoolDown && Zready == false)
         {
-            _Xcounter = 0;
+            _Zcounter = 0;
+            ZEnd = true;
             Zready = true;
         }
         if (Input.GetKey(_ZPower) && Zready == true)
         {
-            wAbility();
+            zAbility();
         }
         #endregion
-        #region Timer Q
+        #region Timer x
         if (Xready == false)
         {
-            _Zcounter += Time.deltaTime;
+            _Xcounter += Time.deltaTime;
         }
-        if (_Zcounter >= _ZCoolDown && Xready == false)
+        if (_Xcounter >= _XCoolDown && Xready == false)
         {
-            _Zcounter = 0;
+            XEnd = true;
+            HasAtacking = false;
+            _Xcounter = 0;
             Xready = true;
         }
-        if (Input.GetKey(_CPower) && Xready == true)
+        if (Input.GetKey(_XPower) && Xready == true)
         {
-            qAbility();
+            xAbility();
         }
         #endregion
-        #region Timer E
+        #region Timer c
         if (Cready == false)
         {
             _Ccounter += Time.deltaTime;
         }
         if (_Ccounter >= _CCoolDown && Cready == false)
         {
+            CEnd = true;
             _Ccounter = 0;
             Cready = true;
         }
-        if (Input.GetKey(_XPower) && Cready == true)
+        if (Input.GetKey(_CPower) && Cready == true)
         {
-            eAbility();
+            cAbility();
         }
         #endregion
         #region Timer Basic
@@ -95,6 +102,8 @@ public class Habilities : MonoBehaviour
         if (_BasicCounter >= _basicCoolDown && basicReady == false)
         {
             _BasicCounter = 0;
+            basicEnd = true;
+            //HasAtacking = false;
             basicReady = true;
         }
         if (Input.GetKey(_basicAtack) && basicReady == true)
@@ -102,22 +111,19 @@ public class Habilities : MonoBehaviour
             basicAtacks();
         }
         #endregion
-
-        
-        #endregion
+        #endregion        
     }
-
-
         public virtual void basicAtacks()
     {
         if (Input.GetKey(_basicAtack) && basicReady == true)
         {
+            HasAtacking = true;
             Instantiate(basicAtack, basicArea.position, basicArea.rotation);
             basicReady = false;
+            basicEnd = false;
         }
     }
-
-        public virtual void wAbility()
+        public virtual void zAbility()
     {
         if (Input.GetKey(_ZPower) && Zready == true)
         {
@@ -125,25 +131,25 @@ public class Habilities : MonoBehaviour
             Zready = false;
         }
     }
-        public virtual void qAbility ()
+        public virtual void xAbility ()
     {
-        if(Input.GetKey(_CPower) && Xready == true)
+        if(Input.GetKey(_XPower) && Xready == true)
         {
+            HasAtacking = true;
             Instantiate(Xprefab, basicArea.position, basicArea.rotation);
             Xready = false;
 
         }
     }
-        public virtual void eAbility()
+        public virtual void cAbility()
     {
-        if(Input.GetKey(_XPower) && Cready == true)
+        if(Input.GetKey(_CPower) && Cready == true)
         {
+            HasAtacking = true;
             Instantiate(Cprefab, basicArea.position, basicArea.rotation);
             Cready = false;
 
         }
-    }
-
-    
+    }    
 }
 

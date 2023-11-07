@@ -17,12 +17,12 @@ public class AtackTimers : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
-        Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
+  Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
 
         if (collision.gameObject.layer == 6 && enemy != null)
         {
             enemy.recibeDMG(damageDealt);
-            Debug.Log("you has hit something");
+
             Destroy(gameObject, 2f);
 
         }

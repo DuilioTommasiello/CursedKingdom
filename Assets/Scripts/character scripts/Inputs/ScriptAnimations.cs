@@ -8,9 +8,10 @@ public class ScriptAnimations : MonoBehaviour
     public Animator playerAnimator;
     public bool isMoving;
     public bool isAtacking;
+    public int WichAtack;
 
     private movement mov;
-    private Habilities Hab;
+    [SerializeField] Habilities Hab;
     private Vector2 _moveInput;
     void Awake()
     {
@@ -36,17 +37,37 @@ public class ScriptAnimations : MonoBehaviour
             playerAnimator.SetFloat("LastHor", LastmoveX);
             playerAnimator.SetFloat("LastVert", LastmoveY);
             playerAnimator.SetBool("isMoving", isMoving = true);
-        }
-        if (Hab.isAtacking == true)
-        {
-            playerAnimator.SetBool("isAtacking", isAtacking = true);
-        }
-        else
+        }else
         {
             playerAnimator.SetBool("isMoving", isMoving = false);
+        }
+
+        if (Hab.HasAtacking == true)
+        {
+            playerAnimator.SetBool("isAtacking", isAtacking = true);
+            if (Hab.basicEnd == true)
+            {
+                playerAnimator.SetBool("isAtacking", isAtacking = false);
+            }
+            //}else if(Hab.XEnd == true)
+            //{
             //playerAnimator.SetBool("isAtacking", isAtacking = false);
-
-
+            //}else if(Hab.CEnd == true)
+            //{
+            //playerAnimator.SetBool("isAtacking", isAtacking = false);
+            //}
+        }
+        if(Hab._BasicCounter > 0)
+        {
+            playerAnimator.SetInteger("WichAtack", WichAtack = 0);
+        }
+        if(Hab._Xcounter >0)
+        {
+            playerAnimator.SetInteger("WichAtack", WichAtack = 1);
+        } 
+        if(Hab._Ccounter >0)
+        {
+            playerAnimator.SetInteger("WichAtack", WichAtack = -1);
         }
     }
 
