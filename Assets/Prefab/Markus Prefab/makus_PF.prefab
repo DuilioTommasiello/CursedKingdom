@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4571709424904615729}
   - component: {fileID: 6766401683520385277}
-  - component: {fileID: 1478342669460499952}
   - component: {fileID: 828328540076951107}
   - component: {fileID: 510096034}
   - component: {fileID: 510096044}
@@ -91,22 +90,6 @@ MonoBehaviour:
   _moveInput: {x: 0, y: 0}
   barLife: {fileID: 0}
   characterIndex: 0
---- !u!70 &1478342669460499952
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571709424904615728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0082376, y: -0.0164752}
-  m_Size: {x: 0.74712825, y: 1.3624549}
-  m_Direction: 0
 --- !u!114 &828328540076951107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSprite: {fileID: 0}
+  HasAtacking: 0
   basicArea: {fileID: 4571709424244402067}
   basicAtack: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
   Zprefab: {fileID: 6484617401747292312, guid: 7dc644b072359ad46ba2852f63eb61df, type: 3}
@@ -128,6 +113,10 @@ MonoBehaviour:
   Zready: 1
   Xready: 1
   Cready: 1
+  basicEnd: 0
+  ZEnd: 0
+  XEnd: 0
+  CEnd: 0
   _BasicCounter: 0
   _Zcounter: 0
   _Xcounter: 0
@@ -5135,3 +5124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 4561974503634807955}
   isMoving: 0
+  isAtacking: 0
+  WichAtack: 0
+  Hab: {fileID: 0}

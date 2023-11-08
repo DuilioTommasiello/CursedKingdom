@@ -42,30 +42,21 @@ public class ScriptAnimations : MonoBehaviour
             playerAnimator.SetBool("isMoving", isMoving = false);
         }
 
-        if (Hab.HasAtacking == true)
+        if (isAtacking == true)
         {
             playerAnimator.SetBool("isAtacking", isAtacking = true);
-            if (Hab.basicEnd == true)
-            {
-                playerAnimator.SetBool("isAtacking", isAtacking = false);
-            }
-            //}else if(Hab.XEnd == true)
-            //{
-            //playerAnimator.SetBool("isAtacking", isAtacking = false);
-            //}else if(Hab.CEnd == true)
-            //{
-            //playerAnimator.SetBool("isAtacking", isAtacking = false);
-            //}
+            
+        }else
+        {
+            playerAnimator.SetBool("isAtacking", isAtacking = false);
         }
-        if(Hab._BasicCounter > 0)
+        if(WichAtack == 0)
         {
             playerAnimator.SetInteger("WichAtack", WichAtack = 0);
-        }
-        if(Hab._Xcounter >0)
+        }else if(WichAtack == 1)
         {
             playerAnimator.SetInteger("WichAtack", WichAtack = 1);
-        } 
-        if(Hab._Ccounter >0)
+        } else if(WichAtack == -1)
         {
             playerAnimator.SetInteger("WichAtack", WichAtack = -1);
         }

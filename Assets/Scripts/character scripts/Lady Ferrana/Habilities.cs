@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class Habilities : MonoBehaviour
 {
     [Header("animations")]
-    [SerializeField] public GameObject characterSprite;
+    [SerializeField] ScriptAnimations animations;
     public bool HasAtacking;
-
-
+    private float timerAnim;
 
     [SerializeField] public Transform basicArea;
     [SerializeField] public GameObject basicAtack;
@@ -36,7 +35,8 @@ public class Habilities : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        cancelAnim();
+        if (Input.GetKeyDown(KeyCode.O))
         {
             SceneManager.LoadScene("Bauti Scene");
         }
@@ -85,8 +85,8 @@ public class Habilities : MonoBehaviour
         }
         if (_Ccounter >= _CCoolDown && Cready == false)
         {
-            CEnd = true;
             _Ccounter = 0;
+            CEnd = true;
             Cready = true;
         }
         if (Input.GetKey(_CPower) && Cready == true)
@@ -103,7 +103,6 @@ public class Habilities : MonoBehaviour
         {
             _BasicCounter = 0;
             basicEnd = true;
-            //HasAtacking = false;
             basicReady = true;
         }
         if (Input.GetKey(_basicAtack) && basicReady == true)
@@ -117,7 +116,8 @@ public class Habilities : MonoBehaviour
     {
         if (Input.GetKey(_basicAtack) && basicReady == true)
         {
-            HasAtacking = true;
+            animations.isAtacking = true;
+            animations.WichAtack = 0;
             Instantiate(basicAtack, basicArea.position, basicArea.rotation);
             basicReady = false;
             basicEnd = false;
@@ -135,7 +135,8 @@ public class Habilities : MonoBehaviour
     {
         if(Input.GetKey(_XPower) && Xready == true)
         {
-            HasAtacking = true;
+            animations.isAtacking = true;
+            animations.WichAtack = 1;
             Instantiate(Xprefab, basicArea.position, basicArea.rotation);
             Xready = false;
 
@@ -145,11 +146,23 @@ public class Habilities : MonoBehaviour
     {
         if(Input.GetKey(_CPower) && Cready == true)
         {
-            HasAtacking = true;
+            animations.isAtacking = true;
+            animations.WichAtack = -1;
             Instantiate(Cprefab, basicArea.position, basicArea.rotation);
             Cready = false;
 
         }
     }    
+        void cancelAnim()
+        {
+        if (animations.isAtacking == true)
+        { 
+         timerAnim += Time.deltaTime;
+            if(timerAnim >= 3)
+            {
+                animations.isAtacking = false;
+            }
+        }
+        }
 }
 
