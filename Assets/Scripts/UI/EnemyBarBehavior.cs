@@ -5,21 +5,18 @@ using UnityEngine.UI;
 
 public class EnemyBarBehavior : MonoBehaviour
 {
-    public Slider Slider;
-    public Color low;
-    public Color high;
-    public Vector3 Offset;
-   
-    public void setHealth(float health, float maxHealth)
-    {
-        Slider.gameObject.SetActive(health < maxHealth);
-        Slider.value = health;
-        Slider.value = maxHealth;
+    [SerializeField] public Slider slider;
+    [SerializeField] public new Camera camera;
+    [SerializeField] public Transform target;
+    [SerializeField] public Vector3 offset;
 
-        Slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(low, high, Slider.normalizedValue);
-    }
-    void Update()
+    public void UpdateHealBar(float currentValue, float maxValue)
     {
-        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
+        slider.value = currentValue / maxValue;
+    }
+    private void Update()
+    {
+        transform.rotation = camera.transform.rotation;
+        transform.position = target.position + offset;
     }
 }
