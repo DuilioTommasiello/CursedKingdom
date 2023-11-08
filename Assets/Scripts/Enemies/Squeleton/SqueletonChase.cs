@@ -30,7 +30,7 @@ public class SqueletonChase : MonoBehaviour
                 float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
                 transform.position = Vector2.MoveTowards(this.transform.position, ferrana.transform.position, speed * Time.deltaTime);
                 speed = 3.2f;
-            }else if(playerDistance >= 4 )
+            }else if(playerDistance <= 4 )
             {
                 Vector2 direction = ferrana.transform.position - transform.position;
                 float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
@@ -41,7 +41,7 @@ public class SqueletonChase : MonoBehaviour
         else
         {
             playerDistance = Vector2.Distance(transform.position, markus.transform.position);
-            if (playerDistance <= chasedistance && playerDistance > agressiveDistance)
+            if (playerDistance <= chasedistance && playerDistance < agressiveDistance)
             {
                 Vector2 direction = markus.transform.position - transform.position;
                 float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
