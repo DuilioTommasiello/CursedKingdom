@@ -1392,6 +1392,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2857127634804340483, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2857127634804340483, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6684011889373158708, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: playerAnimator
       value: 
@@ -1400,6 +1408,18 @@ PrefabInstance:
       propertyPath: characterSprite
       value: 
       objectReference: {fileID: 2120944681}
+    - target: {fileID: 8174788458120581384, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_Size.x
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174788458120581384, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174788458120581384, guid: 0935504424aee384190b4e2559961c5d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0935504424aee384190b4e2559961c5d, type: 3}
 --- !u!1 &2084637208
