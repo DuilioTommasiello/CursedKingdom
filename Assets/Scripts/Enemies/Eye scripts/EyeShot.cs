@@ -20,7 +20,7 @@ public class EyeShot : MonoBehaviour
         if(enmPH.NeedShot == true)
         {
         bulletTimer += Time.fixedDeltaTime;
-        if(enmSC._EnemLife > 0 && bulletTimer >= finalBulletTimer )
+        if(enmSC.EnemLife > 0 && bulletTimer >= finalBulletTimer )
         {
             Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
             bulletTimer = 0;

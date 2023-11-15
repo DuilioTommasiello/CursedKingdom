@@ -24,6 +24,7 @@ public class Shield : MonoBehaviour
         {
             boxCol.enabled = true;
             EnLi.enabled = true;
+            EnLi.GetComponent<EnemyBarBehavior>();
             Destroy(gameObject);
         }
     }

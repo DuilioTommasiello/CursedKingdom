@@ -7,7 +7,7 @@ public class EnemyBarBehavior : MonoBehaviour
 {
     [SerializeField] public Slider slider;
     [SerializeField] public new Camera camera;
-    [SerializeField] public Transform target;
+    [SerializeField] public GameObject target;
     [SerializeField] public Vector3 offset;
 
     public void UpdateHealBar(float currentValue, float maxValue)
@@ -17,6 +17,6 @@ public class EnemyBarBehavior : MonoBehaviour
     private void Update()
     {
         transform.rotation = camera.transform.rotation;
-        transform.position = target.position + offset;
+        transform.position = target.transform.position + offset;
     }
 }

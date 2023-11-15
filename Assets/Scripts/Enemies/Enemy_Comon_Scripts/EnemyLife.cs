@@ -7,21 +7,25 @@ public class EnemyLife : MonoBehaviour
 {
 
     [Header("Stats")]
-    [SerializeField] public float _EnemLife, _EnemyMaxLife;
+    [SerializeField] public float EnemLife, EnemyMaxLife, initialLife;
     private GameObject _enemy;
-    [SerializeField] public EnemyBarBehavior enemyBar;
+    [SerializeField] EnemyBarBehavior enemyBar;
 
+    private void Awake()
+    {
+        EnemLife = EnemyMaxLife;
+    }
     private void Start()
     {
-        enemyBar = GetComponent<EnemyBarBehavior>();
-        _EnemLife = _EnemyMaxLife;
+        enemyBar = GetComponentInChildren<EnemyBarBehavior>();
+        initialLife = EnemyMaxLife;
     }
     public void recibeDMG(float dmg)
     {
-        Debug.Log("enemy has been hit and has " + _EnemLife + "life remaning ");
-        _EnemLife -= dmg;
-        enemyBar.UpdateHealBar(_EnemLife, _EnemyMaxLife);
-        if (_EnemLife <= 0)
+        Debug.Log("enemy has been hit and has " + EnemLife + "life remaning ");
+        EnemLife -= dmg;
+        enemyBar.UpdateHealBar(EnemLife, EnemyMaxLife);
+        if (EnemLife <= 0)
         {
             Destroy(gameObject);
         }
