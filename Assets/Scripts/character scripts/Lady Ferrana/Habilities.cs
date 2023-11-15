@@ -44,6 +44,10 @@ public class Habilities : MonoBehaviour
         {
             SceneManager.LoadScene("tuto");
         }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("Boss LvL");
+        }
         #region Timers
         #region Timer z
         if (Zready == false)
