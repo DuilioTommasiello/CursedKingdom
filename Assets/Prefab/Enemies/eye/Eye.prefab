@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 8375294604260213489}
   - component: {fileID: 8375294604260213488}
   - component: {fileID: 8375294604260213498}
+  - component: {fileID: 6276802643325625582}
   m_Layer: 0
   m_Name: Eye
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chasedistance: 10
+  stopDistance: 5
   playerDistance: 0
   swNum: {fileID: 0}
   ferrana: {fileID: 0}
@@ -166,7 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e221917b689cc9e4585125504c6a9440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EnemLife: 90
+  EnemLife: 0
+  EnemyMaxLife: 0
+  initialLife: 0
+  enemyBar: {fileID: 0}
 --- !u!114 &8375294604260213498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +191,20 @@ MonoBehaviour:
   EyeAnim: {fileID: 0}
   directionX: 0
   directionY: 0
+--- !u!114 &6276802643325625582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8375294604260213491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf540f4d1d37f6a4ca135ce56c42e358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
 --- !u!1 &8375294605580281361
 GameObject:
   m_ObjectHideFlags: 0

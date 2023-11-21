@@ -7,6 +7,8 @@ TagManager:
   - Enemies
   - Walls
   - slash
+  - EnemyBullet
+  - Attacks
   layers:
   - Default
   - TransparentFX

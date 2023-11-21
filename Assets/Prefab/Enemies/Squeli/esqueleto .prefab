@@ -268,9 +268,10 @@ GameObject:
   - component: {fileID: 3544576662453870265}
   - component: {fileID: 6977091635395120018}
   - component: {fileID: 8861336754396697892}
+  - component: {fileID: 324850748322286148}
   m_Layer: 6
   m_Name: 'esqueleto '
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e221917b689cc9e4585125504c6a9440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EnemLife: 175
+  EnemLife: 0
+  EnemyMaxLife: 0
+  initialLife: 0
+  enemyBar: {fileID: 0}
 --- !u!61 &8861336754396697892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -441,3 +445,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5891349, y: 2.1421404}
   m_EdgeRadius: 0
+--- !u!114 &324850748322286148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255385530475296970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf540f4d1d37f6a4ca135ce56c42e358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}

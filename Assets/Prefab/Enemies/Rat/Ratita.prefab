@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5301541057539314741}
   - component: {fileID: 5301541057539314737}
   - component: {fileID: 5301541057539314736}
+  - component: {fileID: 297367405583229141}
   m_Layer: 6
   m_Name: Ratita
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e221917b689cc9e4585125504c6a9440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EnemLife: 20
+  EnemLife: 0
+  EnemyMaxLife: 0
+  initialLife: 0
+  enemyBar: {fileID: 0}
 --- !u!114 &5301541057539314736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chsp: {fileID: 5301541057539314741}
+--- !u!114 &297367405583229141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5301541057539314746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf540f4d1d37f6a4ca135ce56c42e358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
