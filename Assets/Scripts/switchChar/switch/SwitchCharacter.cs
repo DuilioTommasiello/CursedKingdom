@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class SwitchCharacter : MonoBehaviour
 {
-    public GameObject Markus, Ferana;
+    public GameObject Markus, Ferana, BarFer, BarMark;
     public CinemachineVirtualCamera virtualCamera;
     
 
@@ -49,6 +49,8 @@ public class SwitchCharacter : MonoBehaviour
 
                 Markus.gameObject.SetActive(false);
                 Ferana.gameObject.SetActive(true);
+                BarFer.gameObject.SetActive(true);
+                BarFer.gameObject.SetActive(false);
                 Ferana.transform.position = Markus.transform.position;
                 FeranaIsPLaying = true;
                 break;
@@ -56,6 +58,8 @@ public class SwitchCharacter : MonoBehaviour
             case 2:
                 Markus.gameObject.SetActive(true);
                 Ferana.gameObject.SetActive(false);
+                BarFer.gameObject.SetActive(false);
+                BarFer.gameObject.SetActive(true);
                 FeranaIsPLaying = false;
 
                 Markus.transform.position = Ferana.transform.position;
