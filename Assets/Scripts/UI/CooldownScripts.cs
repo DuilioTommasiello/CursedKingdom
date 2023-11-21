@@ -17,14 +17,14 @@ public class CooldownScripts : MonoBehaviour
     [Header("C")]
     public Image abilityImgae3;
     bool isCoolDown3 = false;
-    private void Start()
+    public void Start()
     {
         abilityImgae1.fillAmount = 0;
         abilityImgae2.fillAmount = 0;
         abilityImgae3.fillAmount = 0;
     }
 
-    private void Update()
+    public void Update()
     {
         zAbiliti();
         xAbiliti();
