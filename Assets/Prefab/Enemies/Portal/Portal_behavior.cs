@@ -16,7 +16,7 @@ public class Portal_behavior : MonoBehaviour
     public Transform bulletSpawn;
     public GameObject bullet;
     public new List<Transform> Spawns = new List<Transform>();
-    int nextPos = 0;
+    private int nextPos = 0;
     private float timer;
 
 
@@ -32,8 +32,12 @@ public class Portal_behavior : MonoBehaviour
         }
         else if (playerDistance < chasedistance)    
         {
-            //Debug.Log("me movi xd");
-            //portalChange();
+            portalChange();
+            nextPos++;
+            if (nextPos >= 4)
+            {
+                nextPos = 0;
+            }
         }
 
 
@@ -66,6 +70,5 @@ public class Portal_behavior : MonoBehaviour
     void portalChange()
     {
         transform.position = Spawns[nextPos].position;
-        nextPos++;
     }
 }
