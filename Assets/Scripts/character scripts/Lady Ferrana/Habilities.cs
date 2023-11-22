@@ -20,7 +20,7 @@ public class Habilities : MonoBehaviour
 
     [Header("timers")]
     [SerializeField] public float _BasicCounter, _Zcounter, _Xcounter, _Ccounter;
-    [SerializeField] private float _basicCoolDown = 0.5f;
+    [SerializeField] public float _basicCoolDown = 0.5f;
     [SerializeField] public float _ZCoolDown = 1f;
     [SerializeField] public float _XCoolDown = 2f;
     [SerializeField] public float _CCoolDown = 3f;
