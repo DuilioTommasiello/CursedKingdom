@@ -14,6 +14,8 @@ public class movement : MonoBehaviour
     [SerializeField] public float _life;
     [SerializeField] public  bool  _character;
     [SerializeField] public  bool _playerIsMoving = false;
+                     public int _whichRoom;
+
     public Rigidbody2D _PlayerRb;
     public Vector2 _moveInput;
     private Vector2 _actualVec;
@@ -52,12 +54,12 @@ public class movement : MonoBehaviour
 
         }
     }
-    
+   
     public void move( float X, float Y)
     {
         _PlayerRb.MovePosition(_PlayerRb.position + _moveInput * _movSpeed);
 
-    }
+    }|
 
     public void isMoving(float X, float Y)
     {
