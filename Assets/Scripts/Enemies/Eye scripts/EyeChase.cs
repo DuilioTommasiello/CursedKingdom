@@ -24,8 +24,10 @@ public class EyeChase : MonoBehaviour
         {
         if (swNum.FeranaIsPLaying == true)
         {
+            int layerMask = LayerMask.GetMask("walls");
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, ferrana.transform.position, 1f, layerMask);
             playerDistance = Vector2.Distance(transform.position, ferrana.transform.position);
-            if (playerDistance <= chasedistance && playerDistance > stopDistance)
+            if (playerDistance <= chasedistance && playerDistance > stopDistance && hit.collider == null)
             {
                 Vector2 direction = ferrana.transform.position - transform.position;
                 float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;

@@ -277,7 +277,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153208563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -960.55286, y: -473.0136, z: -25.051893}
+=======
+  m_LocalPosition: {x: -960.5415, y: -417.77228, z: -24.538008}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 2.461538, y: 2.461538, z: 2.461538}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3614,9 +3618,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 224554058997499338, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499339, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224554058997499339, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499339, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499444, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499444, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499444, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_CompositePaths.m_Paths.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499445, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224554058997499445, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224554059996975489, guid: c011a71d1d3e5bd42bfe90ea820658e5, type: 3}
       propertyPath: m_Name
@@ -13849,7 +13885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823816, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823816, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_TagString

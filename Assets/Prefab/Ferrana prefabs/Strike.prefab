@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8571816190523275526}
   m_Layer: 7
   m_Name: Strike
-  m_TagString: Attacks
+  m_TagString: slash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
