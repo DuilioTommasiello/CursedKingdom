@@ -23,7 +23,8 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
         player.getDmg(_bulletdamage);
-        Destroy(gameObject);
+         Destroy(gameObject);
+
         }
         if (collision.gameObject.layer == 8 || collision.gameObject.layer == 9|| collision.gameObject.layer == 7)
         {
