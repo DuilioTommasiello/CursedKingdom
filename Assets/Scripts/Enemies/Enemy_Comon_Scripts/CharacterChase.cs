@@ -45,8 +45,10 @@ public class CharacterChase : MonoBehaviour
     }
     public void chaseM() 
     {
+        int layerMask = LayerMask.GetMask("walls");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, markus.transform.position, 1f, layerMask);
         playerDistance = Vector2.Distance(transform.position, markus.transform.position);
-        if (playerDistance <= chasedistance)
+        if (playerDistance <= chasedistance && hit.collider == null)
         {
             Vector2 direction = markus.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;

@@ -59,7 +59,7 @@ public class movement : MonoBehaviour
     {
         _PlayerRb.MovePosition(_PlayerRb.position + _moveInput * _movSpeed);
 
-    }|
+    }
 
     public void isMoving(float X, float Y)
     {
