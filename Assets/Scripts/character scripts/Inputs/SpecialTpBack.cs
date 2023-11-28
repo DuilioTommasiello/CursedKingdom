@@ -9,7 +9,7 @@ public class SpecialTpBack : MonoBehaviour
     public GameObject Markus;
     public bool ChInRoom;
     public Transform BackTp;
-    private KeyCode Tp = KeyCode.E;
+    private KeyCode Tp = KeyCode.V;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
