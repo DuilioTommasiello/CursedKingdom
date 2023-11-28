@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Heavy : MonoBehaviour
 {
-    public float velocidad = 2f;
-    public float distanciaAtaque = 1.5f; 
-    public int danoAtaque = 20;
-    public float tiempoStun = 2f;
+    public float velocidad = 1.5f;
+    public float distanciaAtaque = 1f; 
+    public int danoAtaque = 50;
+    public float tiempoStun = 1f;
     public movement playerMov;
-
     private Transform Ferana;
     private bool estaStuneado = false;
 
@@ -25,10 +24,11 @@ public class Heavy : MonoBehaviour
             if (Vector2.Distance(transform.position, Ferana.position) > distanciaAtaque)
             {
                 Vector2 direccion = (Ferana.position - transform.position).normalized;
-                transform.Translate(direccion * velocidad * Time.deltaTime);
+                transform.Translate(Time.deltaTime * velocidad * direccion);
             }
             else
             {
+                Debug.Log("ejecuto el ataque");
                 Atacar();
             }
         }
@@ -38,23 +38,29 @@ public class Heavy : MonoBehaviour
     {
    
         Ferana.GetComponent<movement>().getDmg(danoAtaque);
-        
-        Stunear();
+
+        StartCoroutine(Stunear());
     }
 
-    void Stunear()
+    IEnumerator Stunear()
     {
         if (!estaStuneado)
         {
             estaStuneado = true;
+
             playerMov.enabled = false;
-            Invoke("Desstunear", tiempoStun);
+ 
+            yield return new WaitForSeconds(tiempoStun);
+
             playerMov.enabled = true;
+            
+            Desstunear();
         }
     }
-
     void Desstunear()
     {
+        playerMov.enabled = true;
+
         estaStuneado = false;
     }
 }
