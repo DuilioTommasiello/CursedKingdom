@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PlantAttack : MonoBehaviour
 {
-    public GameObject player;
-
-    public GameObject anticipation;
-    public GameObject attack;
+    public int Vida;
+    public GameObject attackObjectPrefab;
+    public GameObject finalObjectPrefab;
+    public GameObject MeleeAttack;
     public float attackDistance = 5f;
-    public float attackCooldown = 5f;
+    public float attackCooldown = 1f;
+    public float finalObjectDelay = 1f;
+    public float finalObjectDuration = 2f;
+
+    public GameObject player;
     private float lastAttackTime;
 
     void Start()
-    {   
+    {
         lastAttackTime = Time.time;
     }
 
@@ -21,30 +25,42 @@ public class PlantAttack : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distanceToPlayer <= attackDistance && Time.time - lastAttackTime >= attackCooldown)
+        if (distanceToPlayer <= attackDistance && Time.time - lastAttackTime >= attackCooldown && distanceToPlayer >= 3)
         {
-            // Instantiate an attack object at the player's position
             InstantiateAttackObject(player.transform.position);
 
-            // Update the last attack time
+            lastAttackTime = Time.time;
+        }
+
+        if(distanceToPlayer < 3 && Time.time - lastAttackTime >= attackCooldown)
+        {
+            InstantiateMeleeAttack(player.transform.position);
             lastAttackTime = Time.time;
         }
     }
 
     void InstantiateAttackObject(Vector2 position)
     {
-        float timer = 0f;
+        GameObject attackObject = Instantiate(attackObjectPrefab, position, Quaternion.identity);
 
-        GameObject Anticipation = Instantiate(anticipation, position, Quaternion.identity);
-        timer += Time.deltaTime;
-        Destroy(Anticipation, 1f);
-        
-        if(timer >= 1f)
-        {
-            GameObject AttackObject = Instantiate(attack, position, Quaternion.identity);
-            Destroy(attack, 1f);
-            timer = 0f;
-        }
-        
+        StartCoroutine(WaitAndInstantiateFinalObject(attackObject));
+    }
+
+    IEnumerator WaitAndInstantiateFinalObject(GameObject attackObject)
+    {
+        yield return new WaitForSeconds(finalObjectDelay);
+
+        GameObject finalObject = Instantiate(finalObjectPrefab, attackObject.transform.position, Quaternion.identity);
+
+        Destroy(attackObject);
+
+        Destroy(finalObject, finalObjectDuration);
+    }
+
+    void InstantiateMeleeAttack(Vector2 position)
+    {
+        GameObject attackObject = Instantiate(MeleeAttack, position, Quaternion.identity);
+        Destroy(attackObject, 0.2f);
     }
 }
+

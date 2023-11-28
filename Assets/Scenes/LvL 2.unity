@@ -4718,10 +4718,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed02fdf5a09fe9c478d00ea84334f1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2851151}
+  Vida: 0
   attackObjectPrefab: {fileID: 5058319917922289168, guid: cebc911c0cbfe8e4ba56917ac2c3608d, type: 3}
-  attackDistance: 15
-  attackCooldown: 1
+  finalObjectPrefab: {fileID: 3159907692576103486, guid: 3e01f667d4e4e164c8a8307e9bb4d3b9, type: 3}
+  MeleeAttack: {fileID: 2492757211690017840, guid: de6ded033473c3f49aa8654516661db1, type: 3}
+  attackDistance: 12
+  attackCooldown: 3
+  finalObjectDelay: 1
+  finalObjectDuration: 1
+  player: {fileID: 2851151}
+--- !u!114 &1405083579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405083575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221917b689cc9e4585125504c6a9440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemLife: 50
+  EnemyMaxLife: 50
+  initialLife: 50
+  enemyBar: {fileID: 0}
+--- !u!61 &1405083580
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405083575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1438483908
 GameObject:
   m_ObjectHideFlags: 0
@@ -10442,6 +10489,14 @@ PrefabInstance:
     - target: {fileID: 7558021174350249599, guid: 77c4edff6aec2ee49ba1a65becabfeaf, type: 3}
       propertyPath: m_Name
       value: Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558021174350249599, guid: 77c4edff6aec2ee49ba1a65becabfeaf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558021174350249599, guid: 77c4edff6aec2ee49ba1a65becabfeaf, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77c4edff6aec2ee49ba1a65becabfeaf, type: 3}
