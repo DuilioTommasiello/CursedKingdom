@@ -26,7 +26,7 @@ public class RoomManager : MonoBehaviour
 
         foreach(Collider2D collider in rooms)
         {
-            #region rooms index 
+            #region roomsIndex 
             if (collider.bounds.Contains(player.transform.position))
             {
                 InsideARoom = true;
