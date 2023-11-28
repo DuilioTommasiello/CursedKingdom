@@ -9,7 +9,6 @@ TagManager:
   - slash
   - EnemyBullet
   - Attacks
-  - Boss
   layers:
   - Default
   - TransparentFX
