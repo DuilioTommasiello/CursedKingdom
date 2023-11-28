@@ -8,7 +8,6 @@ public class PlatformLife : MonoBehaviour
 
     public void PlatDMG(float dmg)
     {
-        Debug.Log("plaform has been hit and has " + life + "life remaning ");
         life -= dmg;
         if (life <= 0)
         {
