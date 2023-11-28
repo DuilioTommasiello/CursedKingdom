@@ -7,33 +7,46 @@ public class SecondState : MonoBehaviour
     [SerializeField] EnemyLife enemySc;
     [SerializeField] List<Transform> wayPoints;
     public int nextPos = 0;
-    public int timer = 0;
+    public float timer = 0;
+    public float finaltimer = 10;
+    private Collider2D boxCollider;
 
-    private void Awake()
+
+    private void Start()
     {
-        enemySc = GetComponent<EnemyLife>();
+        boxCollider = GetComponent<Collider2D>();
     }
-
     private void Update()
     {
-        patroll();
+        if(enemySc.EnemLife == 50 && wayPoints.Count != 0 )
+        {
+        secondState();            
+        }
+    }
+    void secondState()
+    {
+        Debug.Log("secondState");
+        timer += Time.deltaTime;
+
+        if (timer >= finaltimer)
+        {
+            timer = 0f;
+            TeleportToNextWaypoint();
+        }
     }
 
-    void patroll()
+    void TeleportToNextWaypoint()
     {
-        if(enemySc.EnemLife < enemySc.EnemLife/2)
+        Debug.Log("TeleportToNextWaypoint");
+        if (boxCollider != null)
         {
-            Debug.Log("hola marcianete");
-        transform.position = wayPoints[0].position;
-        timer++;
-        
-        if (timer >= 3 )
+            boxCollider.enabled = false;
+        }
+        nextPos++;
+        if (nextPos >= wayPoints.Count)
         {
-            timer = 0;
-            nextPos++;
-            transform.position = wayPoints[nextPos].position;
-        
+            nextPos = 0;
         }
-        }
+        transform.position = wayPoints[nextPos].position;
     }
 }
