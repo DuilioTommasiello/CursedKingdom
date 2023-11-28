@@ -30,9 +30,12 @@ public class basicArrow : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.layer == 8 || collision.gameObject.layer == 9 || collision.gameObject.layer == 6 )
+        {
         Destroy(gameObject);
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, effectTimer);
+        }
         
     }
 }

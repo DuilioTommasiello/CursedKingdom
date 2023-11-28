@@ -9,6 +9,7 @@ TagManager:
   - slash
   - EnemyBullet
   - Attacks
+  - platform
   layers:
   - Default
   - TransparentFX

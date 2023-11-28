@@ -18,6 +18,7 @@ public class AtackTimers : MonoBehaviour
     {
         EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
         BossLife boss = collision.gameObject.GetComponent<BossLife>();
+        PlatformLife plat = collision.gameObject.GetComponent<PlatformLife>();
         Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
 
         if (collision.gameObject.layer == 6 && enemy != null)
@@ -34,6 +35,12 @@ public class AtackTimers : MonoBehaviour
         }
         if (collision.gameObject.layer == 8)
         {
+            Destroy(gameObject, 2f);
+
+        }
+        if (collision.gameObject.CompareTag("platform"))
+        {
+            plat.PlatDMG(damageDealt);
             Destroy(gameObject, 2f);
 
         }
