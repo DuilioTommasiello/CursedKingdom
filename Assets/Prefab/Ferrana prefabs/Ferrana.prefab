@@ -48,9 +48,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 2184927094857823820}
   - component: {fileID: 6684011889373158708}
   - component: {fileID: 1457223801}
+  - component: {fileID: 2184927093496417858}
   m_Layer: 3
   m_Name: Ferrana
   m_TagString: Player
@@ -4867,6 +4868,7 @@ MonoBehaviour:
   _life: 200
   _character: 0
   _playerIsMoving: 0
+  _whichRoom: 0
   _PlayerRb: {fileID: 0}
   _moveInput: {x: 0, y: 0}
   barLife: {fileID: 0}
@@ -4904,13 +4906,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 0}
+  animations: {fileID: 4587185219950898247}
   HasAtacking: 0
   basicArea: {fileID: 5900234540407914847}
   basicAtack: {fileID: 6543985442120207176, guid: b64fd66b288035c41ae32d0b09b88d9f, type: 3}
   Zprefab: {fileID: 5471325156760903172, guid: 6d62a9467b8ada544b6d0cdb282d442d, type: 3}
-  Xprefab: {fileID: 6949149490231088953, guid: a1b3631aae1c6aa4aad1fce3198cbae0, type: 3}
-  Cprefab: {fileID: 2408839881451889732, guid: 06d3f5d1677f5074fa31208935c8110b, type: 3}
+  Xprefab: {fileID: 2408839881451889732, guid: 06d3f5d1677f5074fa31208935c8110b, type: 3}
+  Cprefab: {fileID: 6949149490231088953, guid: a1b3631aae1c6aa4aad1fce3198cbae0, type: 3}
   basicReady: 1
   Zready: 0
   Xready: 0
@@ -4943,7 +4945,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed2cbb26d482fc409ffa0a88cfea2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DustVertical: {fileID: 0}
+  DustVertical: {fileID: 1760536200}
+--- !u!61 &2184927093496417858
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184927094857823816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0078757405, y: -0.16591528}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8582367, y: 1.0168011}
+  m_EdgeRadius: 0
 --- !u!1 &2857127634804340483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,6 +4984,8 @@ GameObject:
   - component: {fileID: 8174788458120581384}
   - component: {fileID: 5045431874253867041}
   - component: {fileID: 4587185219950898247}
+  - component: {fileID: 1754555683}
+  - component: {fileID: 1754555682}
   m_Layer: 3
   m_Name: FerranaSprite
   m_TagString: Untagged
@@ -5018,7 +5048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 943621991
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1447370408, guid: 2f78fc90f6992af409a7ece76f781424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5066,7 +5096,37 @@ MonoBehaviour:
   isMoving: 0
   isAtacking: 0
   WichAtack: 0
-  Hab: {fileID: 0}
+  Hab: {fileID: 6684011889373158708}
+--- !u!70 &1754555683
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857127634804340483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000059604645, y: 0}
+  m_Size: {x: 1.1022252, y: 1.9768938}
+  m_Direction: 0
+--- !u!114 &1754555682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857127634804340483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b880a25f218b542af8709319a173f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4637350885269735624
 GameObject:
   m_ObjectHideFlags: 0
