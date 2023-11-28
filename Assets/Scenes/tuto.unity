@@ -1273,7 +1273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &410541026
 Transform:
   m_ObjectHideFlags: 0
@@ -1619,27 +1619,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8582367, y: 1.0343184}
   m_EdgeRadius: 0
---- !u!50 &510096044
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510096030}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &516549152
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,7 +3594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967761291}
-  - component: {fileID: 967761292}
+  - component: {fileID: 967761290}
   m_Layer: 0
   m_Name: Rooms manager
   m_TagString: Untagged
@@ -3623,6 +3602,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &967761290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967761289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d25249ded0554945a345bd2e5f9fda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1457223795}
+  Fogs:
+  - {fileID: 732600337}
+  - {fileID: 535373257}
+  - {fileID: 1489195690}
+  - {fileID: 1629303537}
+  - {fileID: 978193397}
+  rooms:
+  - {fileID: 589066728}
+  - {fileID: 1312516194}
+  - {fileID: 1808342094}
+  - {fileID: 553611004}
+  - {fileID: 1090103242}
 --- !u!4 &967761291
 Transform:
   m_ObjectHideFlags: 0
@@ -3643,32 +3647,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &967761292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967761289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d25249ded0554945a345bd2e5f9fda8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1148350031}
-  _whichRoom: 0
-  Fogs:
-  - {fileID: 732600337}
-  - {fileID: 535373257}
-  - {fileID: 1489195690}
-  - {fileID: 1629303537}
-  - {fileID: 978193397}
-  rooms:
-  - {fileID: 589066728}
-  - {fileID: 1312516194}
-  - {fileID: 1808342094}
-  - {fileID: 553611004}
-  - {fileID: 1090103242}
 --- !u!1 &978193397
 GameObject:
   m_ObjectHideFlags: 0
@@ -13714,11 +13692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.270006
+      value: 0.1000061
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.349998
+      value: -2.4300003
       objectReference: {fileID: 0}
     - target: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13997,11 +13975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571709424904615729, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.77
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4571709424904615729, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.88
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4571709424904615729, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14051,8 +14029,7 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.6026205
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7622140683911606061, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
 --- !u!1001 &5301541057563592077
 PrefabInstance:
