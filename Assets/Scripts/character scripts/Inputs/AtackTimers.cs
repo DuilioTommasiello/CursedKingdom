@@ -18,7 +18,7 @@ public class AtackTimers : MonoBehaviour
     {
         EnemyLife enemy = collision.gameObject.GetComponent<EnemyLife>();
         BossLife boss = collision.gameObject.GetComponent<BossLife>();
-  Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
+        Object_Box_Searcher box = collision.gameObject.GetComponent<Object_Box_Searcher>();
 
         if (collision.gameObject.layer == 6 && enemy != null)
         {

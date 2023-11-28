@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 6766401683520385277}
   - component: {fileID: 828328540076951107}
   - component: {fileID: 510096034}
-  - component: {fileID: 510096044}
   m_Layer: 3
   m_Name: makus_PF
   m_TagString: Player
@@ -86,6 +85,7 @@ MonoBehaviour:
   _life: 200
   _character: 0
   _playerIsMoving: 0
+  _whichRoom: 0
   _PlayerRb: {fileID: 0}
   _moveInput: {x: 0, y: 0}
   barLife: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 0}
+  animations: {fileID: 0}
   HasAtacking: 0
   basicArea: {fileID: 4571709424244402067}
   basicAtack: {fileID: 8785375203781158088, guid: 3139b4a6e320dbe48a5ad3b3780354b7, type: 3}
@@ -150,21 +150,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &510096044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4571709424904615728}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1548224bea92ba40b0910d91f47ae40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mov: {fileID: 6766401683520385277}
-  hab: {fileID: 828328540076951107}
-  dashSpeed: 15
 --- !u!1 &5329701835608082240
 GameObject:
   m_ObjectHideFlags: 0

@@ -98,7 +98,7 @@ public class movement : MonoBehaviour
         #endregion    
 
     }
-    public void getDmg(int dmg)
+    public void getDmg(float dmg)
     {
         barLife.changeActulLife(_life);
         Debug.Log("the player has been hit and has " + _life + "remaning");
