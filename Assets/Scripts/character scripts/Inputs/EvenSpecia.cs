@@ -17,7 +17,6 @@ public class EvenSpecia : MonoBehaviour
         {
             if (Input.GetKeyDown(Tp) && SwCh.FeranaIsPLaying == true)
             {
-                Debug.Log("Ferana tp");
                 Ferrana.transform.position = GlobalTp.transform.position;
                 ChInRoom = true;
                 if (ChInRoom == true)
@@ -27,7 +26,6 @@ public class EvenSpecia : MonoBehaviour
             }
             if (Input.GetKeyDown(Tp) && SwCh.FeranaIsPLaying == false)
             {
-                Debug.Log("Markus tp");
                 Markus.transform.position = GlobalTp.transform.position;
                 ChInRoom = true;
                 if (ChInRoom == true)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SecondState : MonoBehaviour
 {
     [SerializeField] EnemyLife enemySc;
+    [SerializeField] BossShot bossShotSC;
     [SerializeField] List<Transform> wayPoints;
     private Vector3 originalPos;
     private float enemyHalflife;
@@ -22,7 +23,9 @@ public class SecondState : MonoBehaviour
     {
         enemySc = GetComponent<EnemyLife>();
         boxCollider = GetComponent<Collider2D>();
+        bossShotSC = GetComponent<BossShot>();
         enemyHalflife = enemySc.EnemLife / 2;
+        bossShotSC.enabled = false;
 
     }
     private void Update()
@@ -33,9 +36,8 @@ public class SecondState : MonoBehaviour
             return;
         }
         UpdateWaypointsList();
-        if (enemySc.EnemLife == enemyHalflife)
+        if (enemySc.EnemLife <= enemyHalflife)
         {
-
             boxCollider.enabled = false;
             secondState();
         }else
@@ -44,6 +46,7 @@ public class SecondState : MonoBehaviour
         }
         if (wayPoints.Count == 0)
         {
+            bossShotSC.enabled=false;
             enemySc.EnemLife -= 1;
             transform.position = originalPos;
             boxCollider.enabled = true;
@@ -56,7 +59,7 @@ public class SecondState : MonoBehaviour
 
     void secondState()
     {
-        Debug.Log("hola 1");
+        enemySc.EnemLife = enemyHalflife;
         firstTimer += Time.deltaTime;
         if (firstTimer >= finaltimer)
         {
@@ -72,6 +75,7 @@ public class SecondState : MonoBehaviour
 
     void TeleportToNextWaypoint()
     {
+        bossShotSC.enabled = true;
         if (wayPoints[nextPos] != null)
         {
          transform.position = wayPoints[nextPos].position;
@@ -82,13 +86,11 @@ public class SecondState : MonoBehaviour
 
     void UpdateWaypointsList()
     {
-        Debug.Log("UpdateWaypointsList");
         if (wayPoints[nextPos] == null)
         {
             wayPoints.Remove(wayPoints[nextPos]);
             nextPos++;
         }
-        //nextPos = 0;
-        //transform.position = wayPoints[nextPos].position;
+
     }
 }

@@ -13,7 +13,6 @@ public class Shield : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             shieldState += 1;
-            Debug.Log("HomeroChino" + shieldState);
         }
     }
 

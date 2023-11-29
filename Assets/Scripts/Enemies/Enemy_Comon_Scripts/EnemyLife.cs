@@ -22,7 +22,6 @@ public class EnemyLife : MonoBehaviour
     }
     public void recibeDMG(float dmg)
     {
-        Debug.Log("enemy has been hit and has " + EnemLife + "life remaning ");
         EnemLife -= dmg;
         enemyBar.UpdateHealBar(EnemLife, EnemyMaxLife);
         if (EnemLife <= 0)
