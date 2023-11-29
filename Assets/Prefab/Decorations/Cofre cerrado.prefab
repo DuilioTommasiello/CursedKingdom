@@ -102,13 +102,15 @@ MonoBehaviour:
   newSprite: {fileID: 21300000, guid: d36a24b61930a1a4aa2c261b8fd0fc0c, type: 3}
   objectOptions:
   - {fileID: 8356503040738735665, guid: a3763813a4a7be2458e2107a8eeb18e1, type: 3}
-  - {fileID: 6210025351758826076, guid: 252db4f8f9e46b245b6d4abe11301471, type: 3}
+  - {fileID: 0}
   - {fileID: 8471008117553016130, guid: 5f7aee282a03140418c91f55a0a8fe4e, type: 3}
   - {fileID: 3477374099564712252, guid: d2b4e28bd88f877469536112bd6ab8ec, type: 3}
   - {fileID: 0}
   spawnPoint1: {fileID: 1149251683321435951}
   spawnPoint2: {fileID: 1149251684099550357}
   interactionDistance: 2
+  Ferana: {fileID: 0}
+  Markus: {fileID: 0}
 --- !u!1 &1149251683321435948
 GameObject:
   m_ObjectHideFlags: 0
