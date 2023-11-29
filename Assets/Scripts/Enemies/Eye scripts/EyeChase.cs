@@ -16,7 +16,6 @@ public class EyeChase : MonoBehaviour
     public GameObject ferrana;
     public GameObject markus;
     public float speed = 2.5f;
-    public int damage = 5;
     private float distance;
 
 

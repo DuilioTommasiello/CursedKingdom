@@ -5,61 +5,80 @@ using UnityEngine;
 public class ExplosiBox : MonoBehaviour
 {
     public float radioExplosion = 5f;
-    public float damage = 50;
-    [SerializeField] GameObject ferana;
-    [SerializeField] GameObject Markus;
-    [SerializeField] SwitchCharacter swCh;
+    public int damage = 50;
+    SwitchCharacter swCh;
 
-    private bool exploded = false;
-
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (ferana != null && Markus != null && swCh != null)
+        if (other.CompareTag("Player") && swCh.FeranaIsPLaying == true)
         {
-            if (!exploded && (swCh.FeranaIsPLaying == true && Vector2.Distance(transform.position, ferana.transform.position) < 2f))
+            
+            movement playerMovement = other.GetComponent<movement>();
+            if (playerMovement != null)
             {
-                Debug.Log("debug explode fer");
-                Explode();
+                playerMovement.getDmg(playerMovement._life / 2);
             }
-            if (!exploded && (swCh.FeranaIsPLaying == false && Vector2.Distance(transform.position, Markus.transform.position) < 2f))
-            {
-                Debug.Log("debug explode mar");
-                Explode();
-            }
+            Explode();
         }
+        else if (other.CompareTag("Player") && swCh.FeranaIsPLaying == false)
+        {
+            movement playerMovement = other.GetComponent<movement>();
+            if (playerMovement != null)
+            {
+                playerMovement.getDmg(playerMovement._life / 2);
+            }
+            Explode();
+        }
+        else if (other.CompareTag("Enemies"))
+        {
+            
+            Destroy(other.gameObject);
+            Explode();
+        }
+        else if (other.CompareTag("Attacks"))
+        {
 
+            Explode();
+        }
     }
 
     void Explode()
     {
-        Debug.Log("algo");
-        exploded = true;
-        GetComponent<CircleCollider2D>().enabled = true;
-
         
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radioExplosion);
 
         foreach (Collider2D hit in colliders)
         {
-            if (hit.CompareTag("Enemies"))
+            if (hit != null)
             {
-                Debug.Log("debug 1");
-                hit.GetComponent<EnemyLife>().recibeDMG(damage);
+                if (hit.CompareTag("Enemies"))
+                {
+                    EnemyLife enemyLife = hit.GetComponent<EnemyLife>();
+                    if (enemyLife != null)
+                    {
+                        enemyLife.recibeDMG(damage);
+                    }
+                }
+                else if (hit.CompareTag("Player"))
+                {
+                    movement playerMovement = hit.GetComponent<movement>();
+                    if (playerMovement != null)
+                    {
+                        playerMovement.getDmg(damage);
+                    }
+                }
+                else if (hit.CompareTag("Attacks"))
+                {
+                    
+                    Destroy(hit.gameObject);
+                }
             }
-            if (hit.CompareTag("Player"))
-            {
-                Debug.Log("debug 2");
-                hit.GetComponent<movement>().getDmg(damage);
-            }
-            if (hit.CompareTag("Attacks"))
-            {
-                Debug.Log("debug 3");
-            }
-            
         }
-        Destroy(gameObject);
 
-    }
         
- }
+        Destroy(gameObject);
+    }
+
+
+}
 

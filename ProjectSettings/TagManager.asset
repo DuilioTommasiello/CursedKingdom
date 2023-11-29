@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - Attacks
   - platform
+  - Potion
   layers:
   - Default
   - TransparentFX

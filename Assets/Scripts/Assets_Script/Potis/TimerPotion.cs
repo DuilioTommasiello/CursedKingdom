@@ -6,9 +6,9 @@ public class TimerPotion : MonoBehaviour
 {
     [SerializeField] Habilities HabF;
     [SerializeField] Habilities HabM;
-    public GameObject Mark;
-    public GameObject fera;
-    public SwitchCharacter swCh;
+    [SerializeField] public GameObject Mark;
+    [SerializeField] public GameObject fera;
+    [SerializeField] public SwitchCharacter swCh;
 
 
     private void OnTriggerEnter2D(Collider2D collision)

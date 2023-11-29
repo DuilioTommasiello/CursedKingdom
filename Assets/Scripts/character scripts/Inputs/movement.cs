@@ -20,7 +20,7 @@ public class movement : MonoBehaviour
     public Vector2 _moveInput;
     private Vector2 _actualVec;
     [SerializeField] private BarlifeModifer barLife;
-
+    Healpotion Hp;
 
     [Header("Timers")]
     [SerializeField] private int characterIndex;
@@ -34,9 +34,16 @@ public class movement : MonoBehaviour
         _PlayerRb = GetComponent<Rigidbody2D>();
         
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag ("Potion") && _life <= 200)
+        {
+            Hp.PotionHeal += _life;
+        }
+    }
     private void Update()
     {
+        
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         _moveInput = new Vector2(moveX, moveY).normalized;
