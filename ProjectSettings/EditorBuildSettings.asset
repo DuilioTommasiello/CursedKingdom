@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/main menu.unity
     guid: e636d646c6ff9d442b6de7d312b292d7
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e3e8b56b616c12e49a991ddedc593048
+  - enabled: 1
     path: Assets/Scenes/tuto.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -17,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boss LvL.unity
     guid: e37f0f8cc9f35614e908beb360137cd3
+  - enabled: 1
+    path: Assets/Scenes/LvL 2.unity
+    guid: 1b474eee3f9e4d54dacc34357b466ac7
   m_configObjects: {}
