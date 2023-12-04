@@ -11,10 +11,12 @@ public class Heavy : MonoBehaviour
     public float chaseDistance = 5f;
     private bool estaStuneado = false;
     private float tiempoUltimoAtaque;
+
     [Header("dmg")]
     public int danoAtaque = 50;
     public float tiempoStun = 1f;
     public float cooldownEntreAtaques = 2f;
+
     [Header("character")]
     private movement playerMov;
     public Transform Ferana;
@@ -22,92 +24,58 @@ public class Heavy : MonoBehaviour
     private Transform target;
     public SwitchCharacter swNum;
 
+    void Start()
+    {
+        
+        playerMov = GetComponent<movement>();
+    }
 
     void Update()
     {
-        if (swNum.FeranaIsPLaying == true )
+        if (swNum.FeranaIsPLaying == true)
         {
-            chaseF();
-            if (target != null && !estaStuneado)
+            target = Ferana;
+        }
+        else
+        {
+            target = Markus;
+        }
+
+        
+        if (target != null && !estaStuneado)
+        {
+            distanciaAlObjetivo = Vector2.Distance(transform.position, target.position);
+
+            if (distanciaAlObjetivo > distanciaAtaque)
             {
-                if (distanciaAlObjetivo > distanciaAtaque)
-                {
-                    Vector2 direccion = (target.position - transform.position).normalized;
-                    transform.Translate(Time.deltaTime * velocidad * direccion);
-                }
+                Vector2 direccion = (target.position - transform.position).normalized;
+                transform.Translate(Time.deltaTime * velocidad * direccion);
             }
             else
             {
+                
                 if (Time.time - tiempoUltimoAtaque >= cooldownEntreAtaques)
                 {
-                    Debug.Log("Ejecuto el ataque");
                     Atacar();
                     tiempoUltimoAtaque = Time.time;
                 }
             }
         }
-        else
-        {
-            chaseM();
-            if (target != null && !estaStuneado)
-            {
-                if (distanciaAlObjetivo > distanciaAtaque)
-                {
-                    Vector2 direccion = (target.position - transform.position).normalized;
-                    transform.Translate(Time.deltaTime * velocidad * direccion);
-                }
-                else
-                {
-                    if (Time.time - tiempoUltimoAtaque >= cooldownEntreAtaques)
-                    {
-                        Debug.Log("Ejecuto el ataque");
-                        Atacar();
-                        tiempoUltimoAtaque = Time.time;
-                    }
-                }
-            }
-        }
-        
     }
-    
-    void chaseF()
-    {
-        int layerMask = LayerMask.GetMask("walls");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Ferana.transform.position, 1f, layerMask);
-        distanciaAlObjetivo = Vector2.Distance(transform.position, Ferana.transform.position);
-        if (distanciaAlObjetivo <= chaseDistance && hit.collider == null)
-        {
-            Vector2 direction = Ferana.transform.position - transform.position;
-            float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-            transform.position = Vector2.MoveTowards(this.transform.position, Ferana.transform.position, velocidad * Time.deltaTime);
-        }
-    }
-    void chaseM()
-    {
-        int layerMask1 = LayerMask.GetMask("walls");
-        RaycastHit2D hit1 = Physics2D.Raycast(transform.position, Markus.transform.position, 1f, layerMask1);
-        distanciaAlObjetivo = Vector2.Distance(transform.position, Markus.transform.position);
-        if (distanciaAlObjetivo <= chaseDistance && hit1.collider == null)
-        {
-            Vector2 direction = Markus.transform.position - transform.position;
-            float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-            transform.position = Vector2.MoveTowards(this.transform.position, Markus.transform.position, velocidad * Time.deltaTime);
-        }
-    }
-    
 
     void Atacar()
     {
-        if (target != null)
+        if (target != null && playerMov != null)
         {
             playerMov.getDmg(danoAtaque);
             StartCoroutine(Stunear());
+            StartCoroutine(EsperarEntreAtaques());
         }
     }
 
     IEnumerator Stunear()
     {
-        if (!estaStuneado)
+        if (!estaStuneado && playerMov != null)
         {
             estaStuneado = true;
             playerMov.enabled = false;
@@ -115,6 +83,11 @@ public class Heavy : MonoBehaviour
             playerMov.enabled = true;
             estaStuneado = false;
         }
+    }
+
+    IEnumerator EsperarEntreAtaques()
+    {
+        yield return new WaitForSeconds(cooldownEntreAtaques);
     }
 }
 

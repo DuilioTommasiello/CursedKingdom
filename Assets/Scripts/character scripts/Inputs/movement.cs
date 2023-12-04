@@ -34,13 +34,7 @@ public class movement : MonoBehaviour
         _PlayerRb = GetComponent<Rigidbody2D>();
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag ("Potion") && _life <= 200)
-        {
-            Hp.PotionHeal += _life;
-        }
-    }
+    
     private void Update()
     {
         

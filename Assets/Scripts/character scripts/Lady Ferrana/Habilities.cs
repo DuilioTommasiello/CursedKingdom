@@ -40,14 +40,8 @@ public class Habilities : MonoBehaviour
         {
             SceneManager.LoadScene("Bauti Scene");
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("tuto");
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            SceneManager.LoadScene("Boss LvL");
-        }
+
+        
         #region Timers
         #region Timer z
         if (Zready == false)
