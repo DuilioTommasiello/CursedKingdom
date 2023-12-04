@@ -18,14 +18,10 @@ public class ParticleEffect : MonoBehaviour
         {
             CreateDustVertical();
         }
-       
-
-        
-        
     }
     void CreateDustVertical()
     {
-        DustVertical.Play();
+        //DustVertical.Play();
     }
     
 }

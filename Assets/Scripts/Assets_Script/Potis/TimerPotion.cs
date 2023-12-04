@@ -4,53 +4,21 @@ using UnityEngine;
 
 public class TimerPotion : MonoBehaviour
 {
-    [SerializeField] Habilities HabF;
-    [SerializeField] Habilities HabM;
-    [SerializeField] public GameObject Mark;
-    [SerializeField] public GameObject fera;
-    [SerializeField] public SwitchCharacter swCh;
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3 && collision != null)
+
+        if(collision.gameObject.layer == 3)
         {
-            if (HabF.Zready == false && swCh.FeranaIsPLaying == true)
-            {
-                Debug.Log("Reset");
-                HabF.Zready = true;
-                Destroy(gameObject);
-            }
-            if (HabF.Xready == false && swCh.FeranaIsPLaying == true)
-            {
-                Debug.Log("Reset");
-                HabF.Xready = true;
-                Destroy(gameObject);
-            }
-            if (HabF.Cready == false && swCh.FeranaIsPLaying == true)
-            {
-                Debug.Log("Reset");
-                HabF.Cready = true;
-                Destroy(gameObject);
-            }
-            if (HabM.Zready == false &&  swCh.FeranaIsPLaying == false)
-            {
-                Debug.Log("Reset");
-                HabM.Zready = true;
-                Destroy(gameObject);
-            }
-            if (HabM.Xready == false && swCh.FeranaIsPLaying == false)
-            {
-                Debug.Log("Reset");
-                HabM.Xready = true;
-                Destroy(gameObject);
-            }
-            else if (HabM.Cready == false && swCh.FeranaIsPLaying == false)
-            {
-                Debug.Log("Reset");
-                HabM.Cready = true;
-                Destroy(gameObject);
-            }
+        var p = collision.gameObject.GetComponent<Habilities>();
+            p.basicReady = true;
+            p.Zready= true;
+            p.Xready= true;
+            p.Cready= true;
+            p._BasicCounter = 0;
+            p._Zcounter = 0;
+            p._Xcounter = 0;
+            p._Ccounter = 0;
+            Destroy(gameObject);
         }
     }
 }

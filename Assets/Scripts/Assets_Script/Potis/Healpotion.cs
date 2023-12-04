@@ -4,34 +4,27 @@ using UnityEngine;
 
 public class Healpotion : MonoBehaviour
 {
-    [SerializeField] movement movM;
-    [SerializeField] movement movF;
-    public GameObject Mark;
-    public GameObject fera;
-    public Transform target;
-    public SwitchCharacter swCh;
-    public float PotionHeal = 20;
+    public float playerlife;
+    private movement playerMov;
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.layer == 3 && other != null)
+        Debug.Log("tocaste la poti");
+        if(collision.gameObject.layer == 3 )
         {
-            
-            if (movF._life < 200 && swCh.FeranaIsPLaying == true && target == fera)
+             var b = collision.gameObject.GetComponent<movement>();
+            if(b._life <= 180 && b._life > 0)
             {
-                Debug.Log("te heleaste");
-                movF._life += PotionHeal;
-                Destroy(gameObject);
-            }
-            else if (movM._life < 200 && swCh.FeranaIsPLaying == false && target == Mark)
+            b._life += 50;
+            Destroy(gameObject);
+            }else
             {
-                
-                Debug.Log("te heleaste");
-                movM._life += PotionHeal;
-                Destroy(gameObject);
+            Debug.Log("no se puede");
             }
-
         }
+        
     }
+
 }
+

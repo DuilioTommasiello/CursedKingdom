@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 200094704138832392}
   - component: {fileID: 8757075427507421314}
-  - component: {fileID: 8834503486866723532}
   - component: {fileID: 8605357498356491442}
   m_Layer: 0
   m_Name: potion2
@@ -86,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8834503486866723532
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2356233236535262968}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.435
 --- !u!114 &8605357498356491442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,9 +97,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ef2e06a9f578b46ae8b0096bf9f0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movM: {fileID: 0}
-  movF: {fileID: 0}
-  Mark: {fileID: 0}
-  fera: {fileID: 0}
-  swCh: {fileID: 0}
-  PotionHeal: 20

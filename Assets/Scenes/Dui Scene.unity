@@ -953,7 +953,7 @@ PrefabInstance:
       objectReference: {fileID: 2092072020}
     - target: {fileID: 8547982856212089981, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_Name
-      value: timerPOtion
+      value: blue potion
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_RootOrder
@@ -965,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72484624
+      value: -0.7248462
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -977,15 +977,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8547982856212089982, guid: 2960db3bc39817a4586deb52ff34f8cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2325,7 +2325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &864614080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,10 +2343,13 @@ MonoBehaviour:
   distanciaAlObjetivo: 0
   chaseDistance: 5
   danoAtaque: 50
+  stuntimer: 0
+  stuntime: 0
+  AtackTimer: 0
   tiempoStun: 1
   cooldownEntreAtaques: 2
-  Ferana: {fileID: 942568194}
-  Markus: {fileID: 2092072019}
+  Ferana: {fileID: 942568191}
+  Markus: {fileID: 2092072013}
   swNum: {fileID: 475247890}
 --- !u!61 &864614081
 BoxCollider2D:
@@ -2794,11 +2797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &942568194 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2184927094857823822, guid: 0935504424aee384190b4e2559961c5d, type: 3}
-  m_PrefabInstance: {fileID: 1724507532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &942568197 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2184927094857823823, guid: 0935504424aee384190b4e2559961c5d, type: 3}
@@ -2810,6 +2808,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59aba57f17acb8e40a02d5adf3c8ddbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &942568200
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942568191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0078757405, y: -0.17467396}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8582367, y: 1.0343184}
+  m_EdgeRadius: 0
 --- !u!1 &966810640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3218,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029569317}
   m_CullTransparentMesh: 1
+--- !u!1 &1047450141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2356233236535262968, guid: e3e56491c36e4384aaca1fa2d9367818, type: 3}
+  m_PrefabInstance: {fileID: 2005237410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1047450146
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047450141}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.435
 --- !u!1 &1116680831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,11 +3985,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6444309291834752579, guid: e4dfc0b0a914fad428e761ce3e38470d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444309291834752579, guid: e4dfc0b0a914fad428e761ce3e38470d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6833663260979102832, guid: e4dfc0b0a914fad428e761ce3e38470d, type: 3}
       propertyPath: m_Camera
@@ -5972,7 +6017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356233236535262968, guid: e3e56491c36e4384aaca1fa2d9367818, type: 3}
       propertyPath: m_Name
-      value: potion2 (1)
+      value: red potion
       objectReference: {fileID: 0}
     - target: {fileID: 8605357498356491442, guid: e3e56491c36e4384aaca1fa2d9367818, type: 3}
       propertyPath: Mark
@@ -5994,10 +6039,6 @@ PrefabInstance:
       propertyPath: swCh
       value: 
       objectReference: {fileID: 475247890}
-    - target: {fileID: 8834503486866723532, guid: e3e56491c36e4384aaca1fa2d9367818, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3e56491c36e4384aaca1fa2d9367818, type: 3}
 --- !u!1 &2092072013 stripped
@@ -6026,11 +6067,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!4 &2092072019 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4571709424904615729, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
-  m_PrefabInstance: {fileID: 1619968747}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2092072020 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 828328540076951107, guid: 189c01636a96ffd4a85f80fc87412edc, type: 3}
