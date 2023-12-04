@@ -14,24 +14,24 @@ public class Heavy : MonoBehaviour
 
     [Header("dmg")]
     public int danoAtaque = 50;
+    public float stuntimer;
+    public float stuntime;
+    public float AtackTimer;
     public float tiempoStun = 1f;
     public float cooldownEntreAtaques = 2f;
 
     [Header("character")]
     private movement playerMov;
-    public Transform Ferana;
-    public Transform Markus;
-    private Transform target;
+    public GameObject Ferana;
+    public GameObject Markus;
+    private GameObject target;
     public SwitchCharacter swNum;
 
-    void Start()
-    {
-        
-        playerMov = GetComponent<movement>();
-    }
+    
 
     void Update()
     {
+        playerMov = GetComponent<movement>();
         if (swNum.FeranaIsPLaying == true)
         {
             target = Ferana;
@@ -40,54 +40,61 @@ public class Heavy : MonoBehaviour
         {
             target = Markus;
         }
-
-        
-        if (target != null && !estaStuneado)
+        if (target != null)
         {
-            distanciaAlObjetivo = Vector2.Distance(transform.position, target.position);
+            distanciaAlObjetivo = Vector2.Distance(transform.position, target.transform.position);
 
             if (distanciaAlObjetivo > distanciaAtaque)
             {
-                Vector2 direccion = (target.position - transform.position).normalized;
+                Vector2 direccion = (target.transform.position - transform.position).normalized;
                 transform.Translate(Time.deltaTime * velocidad * direccion);
             }
             else
             {
-                
-                if (Time.time - tiempoUltimoAtaque >= cooldownEntreAtaques)
+                stuntime += Time.deltaTime;
+                if (stuntime < 3)
+                { 
+                Stunear();
+                }else if(stuntime > 4)
                 {
-                    Atacar();
-                    tiempoUltimoAtaque = Time.time;
+                    stuntime = 0;
                 }
+
+                    Atacar();
             }
         }
     }
 
     void Atacar()
     {
-        if (target != null && playerMov != null)
-        {
-            playerMov.getDmg(danoAtaque);
-            StartCoroutine(Stunear());
-            StartCoroutine(EsperarEntreAtaques());
-        }
+
+            AtackTimer += Time.deltaTime;
+            if(AtackTimer >= 2)
+            {
+            var L = target.GetComponent<movement>();
+            L.getDmg(danoAtaque);
+            AtackTimer = 0;
+            }
+        
     }
 
-    IEnumerator Stunear()
+        private void  Stunear()
     {
-        if (!estaStuneado && playerMov != null)
-        {
+        Debug.Log("stuneado puto");
+
             estaStuneado = true;
-            playerMov.enabled = false;
-            yield return new WaitForSeconds(tiempoStun);
-            playerMov.enabled = true;
+            var b = target.GetComponent<movement>();
+            b.enabled = false;
+            
+            stuntimer += Time.deltaTime;
+            if(stuntimer >= 1 && estaStuneado == true)
+            {
+            b.enabled = true;
             estaStuneado = false;
-        }
-    }
+            //stuntimer = 0;
+            }
 
-    IEnumerator EsperarEntreAtaques()
-    {
-        yield return new WaitForSeconds(cooldownEntreAtaques);
+           
     }
 }
 

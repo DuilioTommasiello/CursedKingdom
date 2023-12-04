@@ -15,7 +15,6 @@ public class CharacterChase : MonoBehaviour
     public GameObject ferrana;
     public GameObject markus;
     public float speed = 3f;
-    public int damage = 5;
     private float distance;
 
 

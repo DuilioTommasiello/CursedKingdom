@@ -27,9 +27,9 @@ public class Ratatack : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        movement player = collision.gameObject.GetComponent<movement>();
         if (collision.gameObject.layer == 3)
         {
+            movement player = collision.gameObject.GetComponent<movement>();
             if(index == 0)
             {
             player.getDmg(Ratdmg);
