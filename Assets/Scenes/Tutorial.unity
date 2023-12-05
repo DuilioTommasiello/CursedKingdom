@@ -1083,7 +1083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -7.2}
+  m_AnchoredPosition: {x: 0, y: -7.199997}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339007770
@@ -10668,7 +10668,7 @@ PrefabInstance:
     - target: {fileID: 6374467318629909644, guid: fc13188d1ec9a8a489c76a633a411b5f, type: 3}
       propertyPath: dialogueLines.Array.data[1]
       value: Tienes que adentrarte en la mazmorra y despejarla del mal, pero ojo
-        tienes que tenes cuidado.
+        tienes que tener cuidado.
       objectReference: {fileID: 0}
     - target: {fileID: 6374467318629909644, guid: fc13188d1ec9a8a489c76a633a411b5f, type: 3}
       propertyPath: dialogueLines.Array.data[2]
@@ -23271,6 +23271,15 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 390339975}
+    - target: {fileID: 6374467318629909644, guid: fc13188d1ec9a8a489c76a633a411b5f, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374467318629909644, guid: fc13188d1ec9a8a489c76a633a411b5f, type: 3}
+      propertyPath: dialogueLines.Array.data[1]
+      value: Lo primero que debes saber es como moverte, con las flechas del teclado
+        vas a poder moverte
+      objectReference: {fileID: 0}
     - target: {fileID: 6374467318629909647, guid: fc13188d1ec9a8a489c76a633a411b5f, type: 3}
       propertyPath: m_Name
       value: cuadroDeTexto
