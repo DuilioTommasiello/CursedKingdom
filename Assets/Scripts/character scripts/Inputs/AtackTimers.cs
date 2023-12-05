@@ -7,10 +7,12 @@ public class AtackTimers : MonoBehaviour
     Object_Box_Searcher box;
     public float _lifeTime = 0.2f;
     public int damageDealt = 10;
+    public bool needToUpgrade;
 
 
     public void Update()
     {
+       // upgrades();
         Destroy(gameObject, _lifeTime);
     }
     
@@ -47,6 +49,13 @@ public class AtackTimers : MonoBehaviour
     }
     
 
-
+    //void upgrades()
+    //{
+    //    if(needToUpgrade == true)
+    //    {
+    //        damageDealt += 2;
+    //        needToUpgrade = false;
+    //    }
+    //}
 
 }
