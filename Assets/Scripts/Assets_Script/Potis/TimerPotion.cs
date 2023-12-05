@@ -9,7 +9,10 @@ public class TimerPotion : MonoBehaviour
 
         if(collision.gameObject.layer == 3)
         {
-        var p = collision.gameObject.GetComponent<Habilities>();
+
+         var p = collision.gameObject.GetComponent<Habilities>();
+            if(p != null)
+            {
             p.basicReady = true;
             p.Zready= true;
             p.Xready= true;
@@ -19,6 +22,7 @@ public class TimerPotion : MonoBehaviour
             p._Xcounter = 0;
             p._Ccounter = 0;
             Destroy(gameObject);
+            }
         }
     }
 }

@@ -74,13 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boxHealt: 40
   spawnPoint: {fileID: 4142127354039381014}
-  objects:
-  - {fileID: 8471008117553016130, guid: 14cd2c8890e9be043b3da22bf2a6ddd7, type: 3}
-  - {fileID: 4606417284914288621, guid: c3c2217f021329b4aa753b2ebb843f7b, type: 3}
-  - {fileID: 1604355839771847482, guid: 6c022bef0770c0948bfb991965916b90, type: 3}
-  - {fileID: 6210025351758826076, guid: 252db4f8f9e46b245b6d4abe11301471, type: 3}
-  - {fileID: 8356503040738735665, guid: a3763813a4a7be2458e2107a8eeb18e1, type: 3}
-  - {fileID: 3366628617281579012, guid: fd9b805e5320222429122e743c1200c6, type: 3}
+  objects: []
 --- !u!1 &4142127354039381013
 GameObject:
   m_ObjectHideFlags: 0

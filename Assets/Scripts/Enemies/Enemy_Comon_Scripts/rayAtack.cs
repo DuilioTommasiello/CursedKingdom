@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class rayAtack : MonoBehaviour
 {
-    public int RayDmg = 10;
-
+    public float RayDmg = 10;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        movement player = collision.gameObject.GetComponent<movement>();
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject != null)
         {
+            var player = collision.gameObject.GetComponent<movement>();
+            if (player != null && collision.gameObject.layer == 3)
+            {
                 player.getDmg(RayDmg);
-                Destroy(gameObject);         
+                Destroy(gameObject);
+            }
         }
-        
     }
 }

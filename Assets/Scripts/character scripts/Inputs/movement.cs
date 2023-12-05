@@ -101,8 +101,8 @@ public class movement : MonoBehaviour
     }
     public void getDmg(float dmg)
     {
-        barLife.changeActulLife(_life);
         _life -= dmg;
+        barLife.changeActulLife(_life);
     }
     void restartScene()
     {

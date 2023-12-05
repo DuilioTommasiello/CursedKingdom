@@ -10,6 +10,7 @@ public class Fog : MonoBehaviour
         if(collision.gameObject.layer == 3)
         { 
         movement player = collision.gameObject.GetComponent<movement>();
+        if(player != null)
         player.getDmg(fogDmg);
         }
 

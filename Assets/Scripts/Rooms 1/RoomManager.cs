@@ -83,7 +83,6 @@ public class RoomManager : MonoBehaviour
              break;
 
             case 3:
-
                     if (Fogs[2] != null)
                     Fogs[2].SetActive(true);
 
@@ -101,9 +100,6 @@ public class RoomManager : MonoBehaviour
             case 5:
                 if (Fogs[1] != null)
                     Fogs[1].SetActive(true);
-
-                if (Fogs[5] != null)
-                    Fogs[5].SetActive(true);
                 break;
 
 

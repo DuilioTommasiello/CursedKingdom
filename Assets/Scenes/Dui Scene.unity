@@ -4929,11 +4929,11 @@ PrefabInstance:
       objectReference: {fileID: 475247892}
     - target: {fileID: 4435980487344923691, guid: 9b7bbf4757ac000489c3e4e17a1867a1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4435980487344923691, guid: 9b7bbf4757ac000489c3e4e17a1867a1, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7269106564395731352, guid: 9b7bbf4757ac000489c3e4e17a1867a1, type: 3}
       propertyPath: m_RootOrder
@@ -4997,7 +4997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7269106564395731428, guid: 9b7bbf4757ac000489c3e4e17a1867a1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b7bbf4757ac000489c3e4e17a1867a1, type: 3}

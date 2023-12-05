@@ -14,7 +14,6 @@ public class Object_Box_Searcher : MonoBehaviour
         if (_boxHealt <= 0)
         {
             drop();
-            Destroy(gameObject);
         }
     }
 
@@ -32,32 +31,28 @@ public class Object_Box_Searcher : MonoBehaviour
 
     void drop()
     {
-        var Random = UnityEngine.Random.Range(0, (5 + 1));
+        var Random = UnityEngine.Random.Range(0, (objects.Count + 1));
         if (Random == 0)
         {
             Instantiate(objects[0], spawnPoint.position, spawnPoint.rotation);
+            Destroy(gameObject);
+
         }
         else if (Random == 1)
         {
             Instantiate(objects[1], spawnPoint.position, spawnPoint.rotation);
+            Destroy(gameObject);
+
 
         }
         else if (Random == 2)
         {
             Instantiate(objects[2], spawnPoint.position, spawnPoint.rotation);
+            Destroy(gameObject);
+
         }
-        else if (Random == 3)
-        {
-            Instantiate(objects[3], spawnPoint.position, spawnPoint.rotation);
-        }
-        else if (Random == 4)
-        {
-            Instantiate(objects[4], spawnPoint.position, spawnPoint.rotation);
-        }
-        else if (Random == 5)
-        {
-            Instantiate(objects[5], spawnPoint.position, spawnPoint.rotation);
-        }
+
+
 
 
     }

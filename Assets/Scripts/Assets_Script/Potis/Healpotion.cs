@@ -7,24 +7,32 @@ public class Healpotion : MonoBehaviour
     public float playerlife;
     private movement playerMov;
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("tocaste la poti");
-        if(collision.gameObject.layer == 3 )
+        Debug.Log("Tocaste la poción");
+        if (collision.gameObject.layer == 3)
         {
-             var b = collision.gameObject.GetComponent<movement>();
-            if(b._life <= 180 && b._life > 0)
+            var player = collision.gameObject.GetComponent<movement>();
+            if (player != null)
             {
-            b._life += 50;
-            Destroy(gameObject);
-            }else
-            {
-            Debug.Log("no se puede");
+                if (player._life < 150 && player._life > 0)
+                {
+                    player._life += 50;
+                }
+                else
+                {
+                    player._life = 200;
+                }
+
+                var barLifeModifier = FindObjectOfType<BarlifeModifer>(); // Encuentra el objeto con el script BarlifeModifer
+                if (barLifeModifier != null)
+                {
+                    barLifeModifier.changeActulLife(player._life); // Actualiza la barra de vida con el nuevo valor de vida del jugador
+                }
+
+                Destroy(gameObject); // Destruye la poción después de interactuar con ella
             }
         }
-        
     }
-
 }
 
