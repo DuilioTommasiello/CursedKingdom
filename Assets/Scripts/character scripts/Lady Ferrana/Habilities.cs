@@ -151,16 +151,17 @@ public class Habilities : MonoBehaviour
 
         }
     }    
-        void cancelAnim()
-        {
-        if (animations.isAtacking == true)
-        { 
-         timerAnim += Time.deltaTime;
-            if(timerAnim >= 3)
-            {
-                animations.isAtacking = false;
-            }
-        }
+       void cancelAnim()
+        {     
+        
+           if (animations.isAtacking == true)
+           { 
+            timerAnim += Time.deltaTime;
+               if(timerAnim >= 3)
+               {
+                   animations.isAtacking = false;
+               }
+           }
         }
 }
 

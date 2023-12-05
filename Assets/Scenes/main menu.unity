@@ -1128,11 +1128,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Movment: W A S D
+  m_text: 'Movment: Arrows
 
     Principal Attack : Space
 
-    Habilities : J K L
+    Habilities : Z X C
 
     Interactive
     key: V
