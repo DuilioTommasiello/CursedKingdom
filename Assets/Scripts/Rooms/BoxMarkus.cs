@@ -6,7 +6,7 @@ public class BoxMarkus : MonoBehaviour
 {
     public Transform pointA; 
     public Transform pointB; 
-    public float interactionDistance = 2f;
+    public float interactionDistance = 1f;
 
     public GameObject player;
     private bool isTransporting = false;
@@ -19,7 +19,7 @@ public class BoxMarkus : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && !isTransporting && IsPlayerClose())
+        if (Input.GetButtonDown("Interaction") && !isTransporting && IsPlayerClose())
         {
             StartTransport();
         }
@@ -32,6 +32,7 @@ public class BoxMarkus : MonoBehaviour
         player.transform.position = isMovingToB ? pointB.position : pointA.position;
 
         isMovingToB = !isMovingToB;
+
 
         if (!isMovingToB)
         {
@@ -50,4 +51,6 @@ public class BoxMarkus : MonoBehaviour
     {
         return Vector2.Distance(transform.position, player.transform.position) <= interactionDistance;
     }
+
+    
 }

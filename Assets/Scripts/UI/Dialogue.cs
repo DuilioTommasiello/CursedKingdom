@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
     
     void Update()
     {
-        if (isPLayerRange && Input.GetButtonDown("Fire1"))
+        if (isPLayerRange && Input.GetButtonDown("Interaction"))
         {
             if (!didDialogueStart)
             {
