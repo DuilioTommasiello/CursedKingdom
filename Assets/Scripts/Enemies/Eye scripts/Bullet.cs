@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    GameObject target;
+    public GameObject target;
     [SerializeField] public float speed;
     [SerializeField] public int _bulletdamage = 30;
     Rigidbody2D bulletRB;

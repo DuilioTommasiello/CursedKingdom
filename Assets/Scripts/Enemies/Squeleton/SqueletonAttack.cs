@@ -6,6 +6,7 @@ public class SqueletonAttack : MonoBehaviour
 {
     public Transform playerTransform; // Assign in the inspector
     public GameObject objectToInstantiate; // Assign your prefab in the inspector
+    public GameObject specialBullet;
     public float speed = 5.0f;
     public float stopDistance = 2.0f;
     public float instantiationDistance = 1.0f; // Distance from the enemy to instantiate the object
@@ -93,4 +94,5 @@ public class SqueletonAttack : MonoBehaviour
 
         return instantiationPosition;
     }
+
 }
