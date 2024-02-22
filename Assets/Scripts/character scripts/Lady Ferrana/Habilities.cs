@@ -36,11 +36,7 @@ public class Habilities : MonoBehaviour
     void FixedUpdate()
     {
         cancelAnim();
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            SceneManager.LoadScene("Bauti Scene");
-        }
-
+        
         
         #region Timers
         #region Timer z
