@@ -7634,7 +7634,15 @@ PrefabInstance:
     - target: {fileID: 8740359645643261385, guid: 89440cbd16600bf43b07b8894dd15849, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1189457423}
+      objectReference: {fileID: 2851152}
+    - target: {fileID: 8740359645643261385, guid: 89440cbd16600bf43b07b8894dd15849, type: 3}
+      propertyPath: pushDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740359645643261385, guid: 89440cbd16600bf43b07b8894dd15849, type: 3}
+      propertyPath: detectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8740359647276963464, guid: 89440cbd16600bf43b07b8894dd15849, type: 3}
       propertyPath: m_Name
       value: Rock Ferana
