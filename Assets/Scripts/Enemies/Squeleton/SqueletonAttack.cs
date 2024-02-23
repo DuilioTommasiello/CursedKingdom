@@ -11,6 +11,7 @@ public class SqueletonAttack : MonoBehaviour
     public float instantiationDistance = 1.0f;
     private bool isChasing = true;
     public float attackDistance = 10f;
+    public float AttackDuration = 0.1f;
 
     private void Update()
     {
@@ -51,7 +52,7 @@ public class SqueletonAttack : MonoBehaviour
         Vector3 instantiationPosition = DetermineInstantiationPosition();
 
         GameObject instantiatedObject = Instantiate(objectToInstantiate, instantiationPosition, Quaternion.identity);
-        Destroy(instantiatedObject, 0.1f);
+        Destroy(instantiatedObject, AttackDuration);
 
         yield return new WaitForSeconds(0.5f);
 
