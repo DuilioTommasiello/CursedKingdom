@@ -17,7 +17,7 @@ public class enemyPath : MonoBehaviour
 
 
     [SerializeField] List<Transform> wayPoints;
-    public int Speed = 2;
+    public float Speed = 2;
     public bool NeedShot;
     int nextPos = 0;
 

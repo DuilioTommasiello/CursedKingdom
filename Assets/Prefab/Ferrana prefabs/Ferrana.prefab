@@ -4867,6 +4867,7 @@ MonoBehaviour:
   _life: 200
   _character: 0
   _playerIsMoving: 0
+  _whichRoom: 0
   _PlayerRb: {fileID: 0}
   _moveInput: {x: 0, y: 0}
   barLife: {fileID: 0}
@@ -4904,7 +4905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570eefb62a52d1c439df84b54e489366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: 0}
+  animations: {fileID: 0}
   HasAtacking: 0
   basicArea: {fileID: 5900234540407914847}
   basicAtack: {fileID: 6543985442120207176, guid: b64fd66b288035c41ae32d0b09b88d9f, type: 3}
@@ -4923,9 +4924,9 @@ MonoBehaviour:
   _Zcounter: 0
   _Xcounter: 0
   _Ccounter: 0
-  _basicCoolDown: 0.5
-  _ZCoolDown: 1
-  _XCoolDown: 2
+  _basicCoolDown: 1
+  _ZCoolDown: 3
+  _XCoolDown: 3
   _CCoolDown: 3
   _ZPower: 122
   _XPower: 120

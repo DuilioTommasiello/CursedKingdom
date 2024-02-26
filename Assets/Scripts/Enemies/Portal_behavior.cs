@@ -60,7 +60,7 @@ public class Portal_behavior : MonoBehaviour
     public void PortalShoot()
     {
         timer += Time.fixedDeltaTime;
-        if(timer >= 3)
+        if(timer >= 2)
         {
             Instantiate(bullet,bulletSpawn);
             timer = 0;

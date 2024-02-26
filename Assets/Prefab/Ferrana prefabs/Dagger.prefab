@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lifeTime: 0.5
-  damageDealt: 30
+  damageDealt: 20
+  needToUpgrade: 0
 --- !u!114 &528180089737444928
 MonoBehaviour:
   m_ObjectHideFlags: 0
